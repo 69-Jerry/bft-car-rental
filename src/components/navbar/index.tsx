@@ -23,9 +23,13 @@ export default function Navbar() {
     location.pathname === path ? "text-orange-500" : "hover:text-orange-500";
 
   const services = [
-    { label: "Car Rental", to: "/car-rental" },
-    { label: "Estate Services", to: "/estate-services" },
-    { label: "Luxury Vehicles", to: "/luxury-vehicles" },
+    { label: "CAR RENTAL", to: "services" },
+    { label: "CONSTRUCTION", to: "services" },
+    { label: "FLEET MANAGEMENT", to: "services" },
+    { label: "LANDSCAPING", to: "services" },
+    { label: "LOGISTICS SERVICES", to: "services" },
+    { label: "PROPERTY MANAGEMENT", to: "services" },
+    { label: "FPROPERTY SALES", to: "services" },
   ];
 
   return (
@@ -85,11 +89,45 @@ export default function Navbar() {
 
           <div className="flex items-center gap-4">
             <div className="flex items-center gap-3 text-gray-600">
-              <Facebook className="w-4 h-4 hover:text-blue-600" />
-              <Twitter className="w-4 h-4 hover:text-blue-600" />
-              <Instagram className="w-4 h-4 hover:text-blue-600" />
-              <Linkedin className="w-4 h-4 hover:text-blue-600" />
-              <Youtube className="w-4 h-4 hover:text-blue-600" />
+              <a
+                href="https://web.facebook.com/BFTcarRentalAndEstateServices/?_rdc=1&_rdr#"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Facebook className="w-4 h-4 hover:text-blue-600 cursor-pointer" />
+              </a>
+
+              <a
+                href="https://x.com/mybftservices_/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Twitter className="w-4 h-4 hover:text-blue-600 cursor-pointer" />
+              </a>
+
+              <a
+                href="https://www.instagram.com/mybftservices/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Instagram className="w-4 h-4 hover:text-pink-600 cursor-pointer" />
+              </a>
+
+              <a
+                href="linkedin.com/company/109558763/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Linkedin className="w-4 h-4 hover:text-blue-700 cursor-pointer" />
+              </a>
+
+              <a
+                href="#"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Youtube className="w-4 h-4 hover:text-red-600 cursor-pointer" />
+              </a>
             </div>
 
             <span className="flex items-center gap-1 text-sm">
@@ -119,9 +157,12 @@ export default function Navbar() {
 
             {/* Services Dropdown */}
             <div className="relative group">
-              <button className="flex items-center gap-1 hover:text-orange-500">
+              <Link
+                to="/services"
+                className="flex items-center gap-1 hover:text-orange-500"
+              >
                 SERVICES <ChevronDown className="w-4 h-4" />
-              </button>
+              </Link>
 
               <div className="absolute left-0 top-full mt-2 hidden group-hover:block bg-white shadow-md rounded w-48 py-2 text-gray-700 z-50">
                 {services.map((s) => (
@@ -145,17 +186,17 @@ export default function Navbar() {
             <Link to="/sales" className={isActive("/sales")}>
               SALES
             </Link>
-            <Link to="/gallery" className={isActive("/gallery")}>
+            <Link to="#" className={isActive("#")}>
               GALLERY
             </Link>
-            <Link to="/blog" className={isActive("/blog")}>
-              BLOG
+            <Link to="/diaspora" className={isActive("/diaspora")}>
+              DIASPORA
             </Link>
           </div>
 
           {/* Get in Touch Button */}
           <Link
-            to="/get-in-touch"
+            to="/contact"
             className="bg-orange-500 px-5 py-2 rounded text-white text-sm font-semibold hover:bg-orange-600 whitespace-nowrap"
           >
             GET IN TOUCH
@@ -188,7 +229,8 @@ export default function Navbar() {
 
               {/* Services Accordion */}
               <div>
-                <button
+                <Link
+                  to="services"
                   className="flex justify-between w-full"
                   onClick={() => setServicesOpen(!servicesOpen)}
                 >
@@ -196,7 +238,7 @@ export default function Navbar() {
                   <ChevronDown
                     className={`w-4 h-4 ${servicesOpen ? "rotate-180" : ""}`}
                   />
-                </button>
+                </Link>
 
                 {servicesOpen && (
                   <div className="ml-4 mt-2 space-y-2">
@@ -230,13 +272,13 @@ export default function Navbar() {
                 </Link>
               </li>
               <li>
-                <Link to="/gallery" onClick={() => setOpen(false)}>
+                <Link to="#" onClick={() => setOpen(false)}>
                   GALLERY
                 </Link>
               </li>
               <li>
-                <Link to="/blog" onClick={() => setOpen(false)}>
-                  BLOG
+                <Link to="/diaspora" onClick={() => setOpen(false)}>
+                  DIASPORA
                 </Link>
               </li>
             </ul>

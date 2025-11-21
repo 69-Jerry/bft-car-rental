@@ -1,4 +1,4 @@
-
+import About from '../../../../assets/images/pexels-expect-best-79873-323780.jpg'
 
 export function DependingOnNeeds() {
   return (
@@ -11,8 +11,8 @@ export function DependingOnNeeds() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
           {/* Left Image */}
           <div className="flex justify-center">
-            <div className="relative w-full max-w-md h-96 rounded-lg overflow-hidden shadow-lg">
-              {/* <Image src="/modern-luxury-building-estate-architecture.jpg" alt="Modern luxury building" fill className="object-cover" /> */}
+            <div className="relative w-full max-w-md h-70 rounded-lg overflow-hidden shadow-lg">
+              <img src={About} alt="Modern luxury building"  className="object-fill" />
             </div>
           </div>
 

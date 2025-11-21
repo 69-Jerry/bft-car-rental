@@ -1,8 +1,6 @@
 import { Routes, Route,  } from "react-router-dom";
 import { Suspense, lazy } from "react";
 
-
-// Lazy load pages (this makes Suspense actually useful)
 const LandingPage = lazy(() => import("./pages/landing page"));
 const About = lazy(() => import("./pages/about"));
 const AllServices = lazy(() => import("./pages/services"));
@@ -10,6 +8,8 @@ const ContactUs = lazy(() => import("./pages/contact"));
 const TeamPage = lazy(() => import("./pages/team"));
 import LandingLayout from "./layouts/landing";
 import Loader from "./components/loader";
+import SalesSection from "./pages/sales";
+import DiasporaPage from "./pages/diaspora";
 
 function App() {
   return (
@@ -22,6 +22,8 @@ function App() {
       <Route path="services" element={<AllServices />} />
       <Route path="contact" element={<ContactUs />} />
       <Route path="team" element={<TeamPage />} />
+      <Route path="sales" element={<SalesSection/>} />
+      <Route path="diaspora" element={<DiasporaPage/>} />
     </Route>
   </Routes>
 </Suspense>

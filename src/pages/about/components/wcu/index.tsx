@@ -31,10 +31,10 @@ export function WhyChooseUs() {
           <h2 className="text-4xl md:text-5xl font-bold text-[#003d7a] mb-4">WHY CHOOSE US</h2>
           {/* Decorative underline */}
           <div className="flex justify-center items-center gap-2">
-            <div className="w-2 h-2 rounded-full bg-blue-500"></div>
-            <div className="w-2 h-2 rounded-full bg-blue-500"></div>
-            <div className="w-2 h-2 rounded-full bg-blue-500"></div>
-            <div className="w-16 h-1 bg-blue-500 rounded-full"></div>
+            <div className="w-2 h-2 rounded-full bg-[#003d7a]"></div>
+            <div className="w-2 h-2 rounded-full bg-[#003d7a]"></div>
+              <div className="w-2 h-2 rounded-full bg-[#003d7a]"></div>
+            <div className="w-16 h-1 bg-[#003d7a] rounded-full"></div>
           </div>
         </div>
 
@@ -46,7 +46,7 @@ export function WhyChooseUs() {
               <div key={index} className="text-center">
                 {/* Icon Container */}
                 <div className="flex justify-center mb-6">
-                  <div className="w-28 h-28 rounded-full bg-blue-500 flex items-center justify-center">
+                  <div className="w-28 h-28 rounded-full bg-[#FF5E14] flex items-center justify-center">
                     <Icon className="w-12 h-12 text-white" strokeWidth={1.5} />
                   </div>
                 </div>
