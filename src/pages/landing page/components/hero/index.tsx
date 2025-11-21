@@ -5,6 +5,7 @@ import hero from "../../../../assets/images/avi-werde-hHz4yrvxwlA-unsplash.jpg";
 // 👉 Add 2 more images when you have them
 import hero2 from "../../../../assets/images/2025-Toyota-Land-Cruiser-250-004-1440w.jpg";
 import hero3 from "../../../../assets/images/frames-for-your-heart-mR1CIDduGLc-unsplash.jpg";
+import { Link } from "react-router-dom";
 
 export function Hero() {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -77,12 +78,12 @@ export function Hero() {
         </p>
 
         <div className="flex flex-col mt-6 space-y-4 sm:flex-row sm:space-y-0 sm:space-x-4">
-          <button className="px-12 py-3 bg-[#FF5E14] text-white font-semibold text-lg hover:bg-orange-600 transition-colors duration-300 rounded-2xl">
+          <Link to="contact" className="px-12 py-3 bg-[#FF5E14] text-white font-semibold text-lg hover:bg-orange-600 transition-colors duration-300 rounded-2xl">
             CONTACT US
-          </button>
-          <button className="px-12 py-3 bg-white text-[#00234A] font-semibold text-lg transition-colors duration-300 rounded-2xl">
+          </Link>
+          <Link to="about" className="px-12 py-3 bg-white text-[#00234A] font-semibold text-lg transition-colors duration-300 rounded-2xl">
             ABOUT US
-          </button>
+          </Link>
         </div>
       </div>
 
