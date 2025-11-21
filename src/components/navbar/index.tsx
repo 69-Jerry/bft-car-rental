@@ -151,14 +151,14 @@ export default function Navbar() {
             <Link to="/" className={isActive("/")}>
               HOME
             </Link>
-            <Link to="/about" className={isActive("/about")}>
+            <Link to="about" className={isActive("/about")}>
               ABOUT
             </Link>
 
             {/* Services Dropdown */}
             <div className="relative group">
               <Link
-                to="/services"
+                to="services"
                 className="flex items-center gap-1 hover:text-orange-500"
               >
                 SERVICES <ChevronDown className="w-4 h-4" />
@@ -177,13 +177,13 @@ export default function Navbar() {
               </div>
             </div>
 
-            <Link to="/contact" className={isActive("/contact")}>
+            <Link to="contact" className={isActive("/contact")}>
               CONTACT
             </Link>
-            <Link to="/team" className={isActive("/team")}>
+            <Link to="team" className={isActive("/team")}>
               TEAM
             </Link>
-            <Link to="/sales" className={isActive("/sales")}>
+            <Link to="sales" className={isActive("/sales")}>
               SALES
             </Link>
             <Link to="#" className={isActive("#")}>
@@ -222,7 +222,7 @@ export default function Navbar() {
                 </Link>
               </li>
               <li>
-                <Link to="/about" onClick={() => setOpen(false)}>
+                <Link to="about" onClick={() => setOpen(false)}>
                   ABOUT
                 </Link>
               </li>
@@ -257,17 +257,17 @@ export default function Navbar() {
               </div>
 
               <li>
-                <Link to="/contact" onClick={() => setOpen(false)}>
+                <Link to="contact" onClick={() => setOpen(false)}>
                   CONTACT
                 </Link>
               </li>
               <li>
-                <Link to="/team" onClick={() => setOpen(false)}>
+                <Link to="team" onClick={() => setOpen(false)}>
                   TEAM
                 </Link>
               </li>
               <li>
-                <Link to="/sales" onClick={() => setOpen(false)}>
+                <Link to="sales" onClick={() => setOpen(false)}>
                   SALES
                 </Link>
               </li>
