@@ -1,10 +1,10 @@
 import { useState, useEffect } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
-import hero from "../../../../assets/images/pexels-curtis-adams-1694007-4258275.jpg";
+import hero from "../../../../assets/images/avi-werde-hHz4yrvxwlA-unsplash.jpg";
 
 // 👉 Add 2 more images when you have them
-import hero2 from "../../../../assets/images/pexels-safi-erneste-165511538-18029607.jpg";
-import hero3 from "../../../../assets/images/pexels-the-ghazi-2152398165-32570638.jpg";
+import hero2 from "../../../../assets/images/2025-Toyota-Land-Cruiser-250-004-1440w.jpg";
+import hero3 from "../../../../assets/images/frames-for-your-heart-mR1CIDduGLc-unsplash.jpg";
 
 export function Hero() {
   const [currentSlide, setCurrentSlide] = useState(0);
