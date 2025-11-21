@@ -1,4 +1,4 @@
-import wcu from "../../../../assets/images/pexels-fofoclems-27981484.jpg";
+import wcu from "../../../../assets/images/webaliser-_TPTXZd9mOo-unsplash.jpg";
 export function WhyTrustUs() {
   const values = [
     {
