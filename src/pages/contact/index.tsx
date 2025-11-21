@@ -2,9 +2,7 @@ import type React from "react";
 
 import { useState } from "react";
 import { Mail, Phone, MapPin, Send } from "lucide-react";
-import { Navbar } from "../../components/navbar";
 import { Hero } from "./components/hero";
-import { Footer } from "../../components/footer";
 
 interface FormData {
   name: string;
@@ -45,7 +43,6 @@ export function ContactUs() {
 
   return (
     <div className="min-h-screen bg-background flex flex-col">
-      <Navbar />
        <Hero />
 
       <section className="bg-white py-16 px-4 md:px-8 lg:px-16">
@@ -242,7 +239,7 @@ export function ContactUs() {
           </div>
         </div>
       </section>
-      <Footer/>
     </div>
   );
 }
+export default ContactUs; 

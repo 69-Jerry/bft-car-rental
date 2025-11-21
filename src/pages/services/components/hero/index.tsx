@@ -1,4 +1,4 @@
-import pavers from "../../../../assets/images/pavers.jpeg";
+import pavers from "../../../../assets/images//pexels-curtis-adams-1694007-4258275.jpg";
 import { Link } from "react-router-dom";
 import { ChevronRight } from "lucide-react";
 

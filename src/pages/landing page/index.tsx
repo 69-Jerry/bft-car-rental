@@ -1,5 +1,4 @@
-import { Footer } from "../../components/footer";
-import { Navbar } from "../../components/navbar";
+
 import { Hero } from "./components/hero";
 import { CustomerReviews } from "./components/reviews";
 import { PricingStats } from "./components/stats";
@@ -9,7 +8,7 @@ import { WhyTrustUs } from "./components/wtsu";
 const LandingPage = () => {
   return (
     <div className="min-h-screen bg-background flex flex-col">
-      <Navbar />
+     
       {/* Hero Section */}
       <Hero />
 
@@ -67,7 +66,6 @@ const LandingPage = () => {
       <OurTeam />
       <CustomerReviews />
       {/* Footer */}
-      <Footer />
     </div>
   );
 };

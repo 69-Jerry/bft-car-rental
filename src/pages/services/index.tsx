@@ -1,9 +1,5 @@
-"use client";
-
 import { ArrowRight } from "lucide-react";
-import { Navbar } from "../../components/navbar";
 import { Hero } from "./components/hero";
-import { Footer } from "../../components/footer";
 
 const services = [
   {
@@ -75,7 +71,6 @@ const services = [
 export function AllServices() {
   return (
     <section className="min-h-screen bg-background flex flex-col">
-      <Navbar />
       <Hero />
       <div className="max-w-7xl mx-auto">
         {/* Header */}
@@ -164,7 +159,7 @@ export function AllServices() {
           </div>
         </div>
       </div>
-      <Footer />
     </section>
   );
 }
+export default AllServices;

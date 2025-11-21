@@ -9,7 +9,7 @@ const stats: StatCircle[] = [
   { percentage: 67, label: "PROJECT DONE" },
   { percentage: 77, label: "HAPPY CLIENTS" },
   { percentage: 54, label: "COMPLETED CO." },
-  { percentage: 73, label: "COUNTRY COVER" },
+  { percentage: 73, label: "REGION COVER" },
 ];
 
 const AnimatedCircle = ({ percentage, label }: StatCircle) => {
@@ -60,7 +60,7 @@ const AnimatedCircle = ({ percentage, label }: StatCircle) => {
 
   return (
     <div ref={circleRef} className="flex flex-col items-center gap-6">
-      <div className="relative w-32 h-32">
+      <div className="relative w-40 h-40">
         <svg
           className="w-full h-full transform -rotate-90"
           viewBox="0 0 120 120"
@@ -93,7 +93,7 @@ const AnimatedCircle = ({ percentage, label }: StatCircle) => {
             r="45"
             fill="none"
             stroke={`url(#gradient-${percentage})`}
-            strokeWidth="8"
+            strokeWidth="10"
             strokeDasharray={circumference}
             strokeDashoffset={strokeDashoffset}
             strokeLinecap="round"
@@ -102,12 +102,12 @@ const AnimatedCircle = ({ percentage, label }: StatCircle) => {
         </svg>
         {/* Percentage text center */}
         <div className="absolute inset-0 flex items-center justify-center">
-          <span className="text-4xl font-bold text-orange-500">
+          <span className="text-2xl font-bold text-orange-500">
             {displayPercentage}%
           </span>
         </div>
       </div>
-      <p className="text-lg font-bold text-blue-900 text-center">{label}</p>
+      <p className="text-2xl font-bold text-blue-900 text-center">{label}</p>
     </div>
   );
 };

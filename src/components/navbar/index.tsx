@@ -1,28 +1,26 @@
 import { useState } from "react";
-import { useLocation } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import {
+  Menu,
+  X,
   ChevronDown,
-  Mail,
-  Phone,
   Facebook,
-  Twitter,
   Instagram,
+  Twitter,
   Linkedin,
   Youtube,
+  Phone,
+  Mail,
 } from "lucide-react";
-import { Link } from "react-router-dom";
+import Logo from "../../assets/images/cropped-cropped-logo_1.png";
 
-export function Navbar() {
-  const [isServicesOpen, setIsServicesOpen] = useState(false);
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-
+export default function Navbar() {
+  const [open, setOpen] = useState(false);
+  const [servicesOpen, setServicesOpen] = useState(false);
   const location = useLocation();
-  const currentPath = location.pathname;
 
   const isActive = (path: string) =>
-    currentPath === path
-      ? "text-orange-400 underline underline-offset-4"
-      : "text-white hover:text-orange-400";
+    location.pathname === path ? "text-orange-500" : "hover:text-orange-500";
 
   const services = [
     { label: "Car Rental", to: "/car-rental" },
@@ -31,213 +29,112 @@ export function Navbar() {
   ];
 
   return (
-    <nav className="w-full">
-      {/* Top Info Bar */}
-      <div className="bg-white px-4 py-3 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between">
+    <>
+      {/* ----------- MOBILE TOP BAR ----------- */}
+      <div className="w-full bg-[#F3F8FF] py-2 flex flex-col items-center md:hidden relative">
+        <div className="flex items-center gap-2 text-[#00306B] font-semibold text-sm">
+          <Phone className="w-4 h-4" />
+          <span>+233 302 524 020</span>
+        </div>
+
+        <div className="flex gap-4 mt-2 text-[#00306B]">
+          <Facebook className="w-5 h-5" />
+          <Twitter className="w-5 h-5" />
+          <Instagram className="w-5 h-5" />
+          <Linkedin className="w-5 h-5" />
+          <Youtube className="w-5 h-5" />
+        </div>
+
+        <div className="absolute right-4 top-2 text-[#00306B] font-semibold">
+          EN ▼
+        </div>
+      </div>
+
+      {/* ----------- MOBILE MAIN NAVBAR ----------- */}
+      <nav className="w-full bg-white py-3 px-4 flex items-center justify-between md:hidden shadow-sm">
+        <Link to="/">
+          <img src={Logo} alt="Logo" className="h-12 object-contain" />
+        </Link>
+
+        <button
+          className="bg-[#F26722] p-3 rounded-md"
+          onClick={() => setOpen(true)}
+        >
+          <Menu className="text-white w-6 h-6" />
+        </button>
+      </nav>
+
+      {/* ----------- DESKTOP HEADER TOP BAR ----------- */}
+      <div className="hidden md:block bg-white border-b">
+        <div className="max-w-7xl mx-auto px-6 py-3 flex justify-between items-center">
           <div className="flex items-center gap-6 text-sm text-gray-700">
             <a
               href="mailto:info.mybftservices@gmail.com"
-              className="flex items-center gap-2 hover:text-blue-600 transition-colors"
+              className="flex items-center gap-2 hover:text-blue-600"
             >
-              <Mail className="w-4 h-4" />
-              <span>info.mybftservices@gmail.com</span>
+              <Mail className="w-4 h-4" /> info.mybftservices@gmail.com
             </a>
 
             <a
               href="tel:+233302524020"
-              className="flex items-center gap-2 hover:text-blue-600 transition-colors"
+              className="flex items-center gap-2 hover:text-blue-600"
             >
-              <Phone className="w-4 h-4" />
-              <span>+233 302 524 020</span>
+              <Phone className="w-4 h-4" /> +233 302 524 020
             </a>
           </div>
 
-          {/* Social Icons + Language */}
           <div className="flex items-center gap-4">
-            <div className="flex items-center gap-3">
-              <a href="#" className="text-gray-600 hover:text-blue-600">
-                <Facebook className="w-4 h-4" />
-              </a>
-              <a href="#" className="text-gray-600 hover:text-blue-600">
-                <Twitter className="w-4 h-4" />
-              </a>
-              <a href="#" className="text-gray-600 hover:text-blue-600">
-                <Instagram className="w-4 h-4" />
-              </a>
-              <a href="#" className="text-gray-600 hover:text-blue-600">
-                <Linkedin className="w-4 h-4" />
-              </a>
-              <a href="#" className="text-gray-600 hover:text-blue-600">
-                <Youtube className="w-4 h-4" />
-              </a>
+            <div className="flex items-center gap-3 text-gray-600">
+              <Facebook className="w-4 h-4 hover:text-blue-600" />
+              <Twitter className="w-4 h-4 hover:text-blue-600" />
+              <Instagram className="w-4 h-4 hover:text-blue-600" />
+              <Linkedin className="w-4 h-4 hover:text-blue-600" />
+              <Youtube className="w-4 h-4 hover:text-blue-600" />
             </div>
 
-            <button className="flex items-center gap-1 text-sm text-gray-700 hover:text-gray-900">
+            <span className="flex items-center gap-1 text-sm">
               EN <ChevronDown className="w-4 h-4" />
-            </button>
+            </span>
           </div>
         </div>
       </div>
 
-      {/* Main Navigation */}
-      <div className="bg-[#00235A]">
-        <div className="px-4 py-4 sm:px-6 lg:px-8">
-          <div className="flex items-center justify-between">
-            {/* Logo */}
-            <Link to="/" className="flex-shrink-0">
-              <div className="flex items-center gap-2">
-                <div className="w-10 h-10 bg-orange-400 rounded-lg flex items-center justify-center font-bold text-white text-sm">
-                  BFT
-                </div>
-                <span className="text-white font-bold text-lg hidden sm:inline">
-                  Car Rental & Estate Services
-                </span>
-              </div>
-            </Link>
+      {/* ----------- DESKTOP NAVBAR ----------- */}
 
-            {/* Desktop Menu */}
-            <div className="hidden md:flex items-center gap-8">
-              <Link to="/" className={isActive("/")}>
-                HOME
-              </Link>
+      <div className="hidden md:block bg-[#00235A]">
+        <div className="max-w-7xl mx-auto px-6 py-3 flex items-center justify-between">
+          {/* Logo */}
+          <Link to="/" className="flex-shrink-0">
+            <img src={Logo} className="h-14 object-contain" />
+          </Link>
 
-              <Link to="/about" className={isActive("/about")}>
-                ABOUT
-              </Link>
-
-              {/* Services Dropdown */}
-              <div className="relative group">
-                <Link to="/services"
-                  className={`${
-                    services.some((s) => s.to === currentPath)
-                      ? "text-orange-400 underline underline-offset-4"
-                      : "text-white hover:text-orange-400"
-                  } flex items-center gap-1`}
-                  onMouseEnter={() => setIsServicesOpen(true)}
-                  onMouseLeave={() => setIsServicesOpen(false)}
-                >
-                  SERVICES
-                  <ChevronDown className="w-4 h-4" />
-                </Link>
-
-                {isServicesOpen && (
-                  <div
-                    className="absolute left-0 mt-0 w-48 bg-white rounded-md shadow-lg py-2 z-50"
-                    onMouseEnter={() => setIsServicesOpen(true)}
-                    onMouseLeave={() => setIsServicesOpen(false)}
-                  >
-                    {services.map((service) => (
-                      <Link
-                        key={service.label}
-                        to={service.to}
-                        className={`block px-4 py-2 transition-colors ${
-                          currentPath === service.to
-                            ? "text-orange-600 bg-orange-50"
-                            : "text-gray-700 hover:bg-orange-50 hover:text-orange-600"
-                        }`}
-                      >
-                        {service.label}
-                      </Link>
-                    ))}
-                  </div>
-                )}
-              </div>
-
-              <Link to="/contact" className={isActive("/contact")}>
-                CONTACT
-              </Link>
-
-              <Link to="/team" className={isActive("/team")}>
-                TEAM
-              </Link>
-
-              <Link to="/sales" className={isActive("/sales")}>
-                SALES
-              </Link>
-
-              <Link to="/gallery" className={isActive("/gallery")}>
-                GALLERY
-              </Link>
-
-              <Link to="/blog" className={isActive("/blog")}>
-                BLOG
-              </Link>
-
-              {/* ⭐ ACTIVE GET IN TOUCH */}
-              <Link
-                to="/get-in-touch"
-                className={`px-4 py-2 rounded-md font-semibold transition-colors ${
-                  currentPath === "/get-in-touch"
-                    ? "bg-orange-600 text-white"
-                    : "bg-orange-500 text-white hover:bg-orange-600"
-                }`}
-              >
-                GET IN TOUCH
-              </Link>
-            </div>
-
-            {/* Mobile Menu Button */}
-            <button
-              className="md:hidden text-white"
-              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            >
-              <svg
-                className="w-6 h-6"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                  d="M4 6h16M4 12h16M4 18h16"
-                />
-              </svg>
-            </button>
-          </div>
-        </div>
-
-        {/* Mobile Menu */}
-        {isMobileMenuOpen && (
-          <div className="md:hidden mt-4 space-y-2 px-4 pb-4">
+          {/* Navigation Links */}
+          <div className="flex-1 flex items-center justify-center gap-10 text-white font-semibold text-sm">
             <Link to="/" className={isActive("/")}>
               HOME
             </Link>
-
             <Link to="/about" className={isActive("/about")}>
               ABOUT
             </Link>
 
-            {/* Mobile Services */}
-            <button
-              className={`w-full text-left flex items-center justify-between ${isActive(
-                "/car-rental"
-              )}`}
-              onClick={() => setIsServicesOpen(!isServicesOpen)}
-            >
-              SERVICES
-              <ChevronDown
-                className={`w-4 h-4 transition-transform ${
-                  isServicesOpen ? "rotate-180" : ""
-                }`}
-              />
-            </button>
+            {/* Services Dropdown */}
+            <div className="relative group">
+              <button className="flex items-center gap-1 hover:text-orange-500">
+                SERVICES <ChevronDown className="w-4 h-4" />
+              </button>
 
-            {isServicesOpen && (
-              <div className="pl-4 space-y-2">
-                {services.map((service) => (
+              <div className="absolute left-0 top-full mt-2 hidden group-hover:block bg-white shadow-md rounded w-48 py-2 text-gray-700 z-50">
+                {services.map((s) => (
                   <Link
-                    key={service.label}
-                    to={service.to}
-                    className={isActive(service.to)}
+                    key={s.to}
+                    to={s.to}
+                    className="block px-4 py-2 hover:bg-gray-100"
                   >
-                    {service.label}
+                    {s.label}
                   </Link>
                 ))}
               </div>
-            )}
+            </div>
 
             <Link to="/contact" className={isActive("/contact")}>
               CONTACT
@@ -254,14 +151,124 @@ export function Navbar() {
             <Link to="/blog" className={isActive("/blog")}>
               BLOG
             </Link>
-
-            {/* ⭐ Mobile GET IN TOUCH */}
-            <Link to="/get-in-touch" className={isActive("/get-in-touch")}>
-              GET IN TOUCH
-            </Link>
           </div>
-        )}
+
+          {/* Get in Touch Button */}
+          <Link
+            to="/get-in-touch"
+            className="bg-orange-500 px-5 py-2 rounded text-white text-sm font-semibold hover:bg-orange-600 whitespace-nowrap"
+          >
+            GET IN TOUCH
+          </Link>
+        </div>
       </div>
-    </nav>
+
+      {/* ----------- MOBILE SLIDE MENU ----------- */}
+      {open && (
+        <div className="fixed inset-0 bg-black/40 z-50 md:hidden">
+          <div className="fixed top-0 left-0 w-80 h-full bg-white p-5 shadow-xl overflow-y-auto">
+            <div className="flex justify-between items-center mb-6">
+              <button onClick={() => setOpen(false)}>
+                <X className="w-6 h-6" />
+              </button>
+              <img src={Logo} className="h-10" />
+            </div>
+
+            <ul className="space-y-4 text-sm font-semibold text-[#00306B]">
+              <li>
+                <Link to="/" onClick={() => setOpen(false)}>
+                  HOME
+                </Link>
+              </li>
+              <li>
+                <Link to="/about" onClick={() => setOpen(false)}>
+                  ABOUT
+                </Link>
+              </li>
+
+              {/* Services Accordion */}
+              <div>
+                <button
+                  className="flex justify-between w-full"
+                  onClick={() => setServicesOpen(!servicesOpen)}
+                >
+                  SERVICES{" "}
+                  <ChevronDown
+                    className={`w-4 h-4 ${servicesOpen ? "rotate-180" : ""}`}
+                  />
+                </button>
+
+                {servicesOpen && (
+                  <div className="ml-4 mt-2 space-y-2">
+                    {services.map((s) => (
+                      <Link
+                        key={s.to}
+                        to={s.to}
+                        onClick={() => setOpen(false)}
+                        className="block"
+                      >
+                        {s.label}
+                      </Link>
+                    ))}
+                  </div>
+                )}
+              </div>
+
+              <li>
+                <Link to="/contact" onClick={() => setOpen(false)}>
+                  CONTACT
+                </Link>
+              </li>
+              <li>
+                <Link to="/team" onClick={() => setOpen(false)}>
+                  TEAM
+                </Link>
+              </li>
+              <li>
+                <Link to="/sales" onClick={() => setOpen(false)}>
+                  SALES
+                </Link>
+              </li>
+              <li>
+                <Link to="/gallery" onClick={() => setOpen(false)}>
+                  GALLERY
+                </Link>
+              </li>
+              <li>
+                <Link to="/blog" onClick={() => setOpen(false)}>
+                  BLOG
+                </Link>
+              </li>
+            </ul>
+
+            {/* Contact Info */}
+            <div className="mt-8">
+              <h2 className="font-bold text-[#00306B] text-lg mb-4">
+                Contact Info
+              </h2>
+
+              <p className="text-sm">📍 17 Ataa Avenue, Madina, Accra Ghana</p>
+              <p className="mt-3 text-sm">📞 +233 302 524 020</p>
+              <p className="mt-3 text-sm">✉️ info.mybftservices@gmail.com</p>
+
+              <Link
+                to="/get-in-touch"
+                className="mt-5 w-full block bg-[#F26722] text-white text-center py-2 rounded"
+              >
+                GET IN TOUCH
+              </Link>
+
+              <div className="flex gap-3 mt-4 justify-center text-[#00306B]">
+                <Facebook className="w-5 h-5" />
+                <Twitter className="w-5 h-5" />
+                <Instagram className="w-5 h-5" />
+                <Linkedin className="w-5 h-5" />
+                <Youtube className="w-5 h-5" />
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
+    </>
   );
 }

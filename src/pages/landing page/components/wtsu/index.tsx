@@ -1,3 +1,4 @@
+import wcu from "../../../../assets/images/pexels-fofoclems-27981484.jpg";
 export function WhyTrustUs() {
   const values = [
     {
@@ -33,10 +34,7 @@ export function WhyTrustUs() {
   return (
     <section
       className="relative min-h-screen bg-cover bg-center bg-no-repeat"
-      style={{
-        backgroundImage:
-          "url(/placeholder.svg?height=1080&width=1920&query=modern-luxury-interior-design)",
-      }}
+       style={{ backgroundImage: `url(${wcu})` }}
     >
       {/* Dark overlay */}
       <div className="absolute inset-0 bg-black/40" />

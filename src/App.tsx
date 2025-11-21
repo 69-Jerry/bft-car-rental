@@ -1,20 +1,32 @@
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route,  } from "react-router-dom";
+import { Suspense, lazy } from "react";
 
-import LandingPage from "./pages/landing page";
-import About from "./pages/about";
-import { AllServices } from "./pages/services";
-import { ContactUs } from "./pages/contact";
-import TeamPage from "./pages/team";
+
+// Lazy load pages (this makes Suspense actually useful)
+const LandingPage = lazy(() => import("./pages/landing page"));
+const About = lazy(() => import("./pages/about"));
+const AllServices = lazy(() => import("./pages/services"));
+const ContactUs = lazy(() => import("./pages/contact"));
+const TeamPage = lazy(() => import("./pages/team"));
+import LandingLayout from "./layouts/landing";
+import Loader from "./components/loader";
 
 function App() {
   return (
-    <Routes>
-      <Route path="/" element={<LandingPage />} />
-      <Route path="/about" element={<About />} />
-      <Route path="/services" element={<AllServices />} />
-      <Route path="/contact" element={<ContactUs />} />
-      <Route path="/team" element={<TeamPage />} />
-    </Routes>
+    
+      <Suspense fallback={<Loader />}>
+  <Routes>
+    <Route path="/" element={<LandingLayout />}>
+      <Route index element={<LandingPage />} />
+      <Route path="about" element={<About />} />
+      <Route path="services" element={<AllServices />} />
+      <Route path="contact" element={<ContactUs />} />
+      <Route path="team" element={<TeamPage />} />
+    </Route>
+  </Routes>
+</Suspense>
+
+   
   );
 }
 
