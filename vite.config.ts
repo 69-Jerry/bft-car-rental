@@ -1,12 +1,13 @@
-import { defineConfig } from "vite"
-import react from "@vitejs/plugin-react"
-import path from "path"
+import { defineConfig } from 'vite'
+import react from '@vitejs/plugin-react'
+import ViteSitemapPlugin from 'vite-plugin-sitemap'
 
 export default defineConfig({
-  plugins: [react()],
-  resolve: {
-    alias: {
-      "@": path.resolve(__dirname, "src")
-    }
-  }
+  plugins: [
+    react(),
+    ViteSitemapPlugin({
+      hostname: 'https://yourdomain.com', // your real domain
+      outDir: 'dist',
+    }),
+  ],
 })
