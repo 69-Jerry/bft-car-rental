@@ -6,7 +6,7 @@ export default defineConfig({
   plugins: [
     react(),
     ViteSitemapPlugin({
-      hostname: 'https://yourdomain.com', // your real domain
+      hostname: 'https://mybftservice.com', 
       outDir: 'dist',
     }),
   ],
