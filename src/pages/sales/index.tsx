@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 
-// Import property images from src/assets/services
+// Property images (temporary placeholders)
 import Property1a from "../../assets/images/Car-Rental6bdb-768x768.png";
 import Property1b from "../../assets/images/Car-Rental6bdb-768x768.png";
 import Property1c from "../../assets/images/Car-Rental6bdb-768x768.png";
@@ -18,6 +18,7 @@ import {
   CardHeader,
   CardTitle,
 } from "../../components/ui/card";
+
 import { Hero } from "./hero";
 
 interface Property {
@@ -32,21 +33,21 @@ const properties: Property[] = [
   {
     id: 1,
     title: "3-Bedroom Luxury Apartment",
-    location: "Accra, East Legon",
+    location: "East Legon, Accra",
     price: "₵2,500,000",
     images: [Property1a, Property1b, Property1c],
   },
   {
     id: 2,
     title: "Modern Office Space",
-    location: "Kumasi, Ahodwo",
+    location: "Ahodwo, Kumasi",
     price: "₵980,000",
     images: [Property2a, Property2b],
   },
   {
     id: 3,
     title: "4-Bedroom Townhouse",
-    location: "Tema Community 25",
+    location: "Community 25, Tema",
     price: "₵1,750,000",
     images: [Property3a],
   },
@@ -55,7 +56,6 @@ const properties: Property[] = [
 export default function SalesSection() {
   const [activeId, setActiveId] = useState<number | null>(null);
 
-  // For image viewer modal
   const [previewImg, setPreviewImg] = useState<string | null>(null);
 
   const toggle = (id: number) => {
@@ -68,25 +68,36 @@ export default function SalesSection() {
       {previewImg && (
         <div
           className="fixed inset-0 bg-black/70 backdrop-blur-sm flex items-center justify-center z-50"
+          aria-label="Image preview modal"
           onClick={() => setPreviewImg(null)}
         >
           <img
             src={previewImg}
-            alt="Preview"
+            alt="Expanded property image preview"
             className="max-w-[90%] max-h-[90%] rounded-lg shadow-xl"
           />
         </div>
-        
       )}
-      <Hero/>
 
-      <section className="py-16 bg-gray-50">
-        
+      <Hero />
+
+      <section
+        className="py-16 bg-gray-50"
+        aria-label="Properties for Sale in Ghana"
+      >
         <div className="max-w-7xl mx-auto px-6">
-          <h2 className="text-3xl font-bold text-center mb-10">
-            Properties for Sale
-          </h2>
 
+          {/* SEO Heading */}
+          <h1 className="text-3xl font-bold text-center mb-10 text-[#003d7a]">
+            Properties for Sale in Ghana
+          </h1>
+
+          <p className="text-center text-gray-600 max-w-2xl mx-auto mb-14">
+            Explore a curated list of luxury homes, townhouses, and commercial
+            properties available for sale across Accra, Kumasi, and Tema.
+          </p>
+
+          {/* GRID */}
           <div className="grid md:grid-cols-3 gap-8">
             {properties.map((property) => {
               const isOpen = activeId === property.id;
@@ -95,18 +106,19 @@ export default function SalesSection() {
                 <Card
                   key={property.id}
                   className="rounded-2xl overflow-hidden shadow hover:shadow-lg transition cursor-pointer"
+                  aria-label={`${property.title} located in ${property.location}`}
                 >
-                  {/* Main Thumbnail */}
+                  {/* Thumbnail */}
                   <div onClick={() => toggle(property.id)}>
                     <img
                       src={property.images[0]}
-                      alt={property.title}
+                      alt={`${property.title} for sale in ${property.location}`}
                       className="w-full h-56 object-cover"
                     />
                   </div>
 
                   <CardHeader onClick={() => toggle(property.id)}>
-                    <CardTitle className="text-xl font-bold">
+                    <CardTitle className="text-xl font-bold text-[#003d7a]">
                       {property.title}
                     </CardTitle>
                     <p className="text-gray-500 text-sm">{property.location}</p>
@@ -117,24 +129,24 @@ export default function SalesSection() {
                       {property.price}
                     </p>
 
-                    {/* ALWAYS VISIBLE BUTTON */}
+                    {/* CALL BUTTON */}
                     <a
                       href="tel:+233XXXXXXXXX"
                       className="block text-center bg-blue-600 text-white py-2 rounded-lg font-semibold hover:bg-blue-700 transition mb-4"
+                      aria-label={`Call BFT to enquire about ${property.title}`}
                     >
                       Call to Enquire
                     </a>
 
-                    {/* EXPANDED SECTION */}
+                    {/* EXPANDED GALLERY */}
                     {isOpen && (
                       <div className="space-y-4">
-                        {/* Gallery */}
                         <div className="grid grid-cols-3 gap-2">
                           {property.images.map((img, i) => (
                             <img
                               key={i}
                               src={img}
-                              alt={`Gallery ${i}`}
+                              alt={`Image ${i + 1} of ${property.title}`}
                               onClick={(e) => {
                                 e.stopPropagation();
                                 setPreviewImg(img);

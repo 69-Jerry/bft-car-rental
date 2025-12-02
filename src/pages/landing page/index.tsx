@@ -1,4 +1,3 @@
-
 import { Hero } from "./components/hero";
 import { CustomerReviews } from "./components/reviews";
 import { PricingStats } from "./components/stats";
@@ -8,64 +7,66 @@ import { WhyTrustUs } from "./components/wtsu";
 const LandingPage = () => {
   return (
     <div className="min-h-screen bg-background flex flex-col">
-     
-      {/* Hero Section */}
+
+      {/* Hero Section (Hero component contains the actual H1) */}
       <Hero />
 
-      {/* Features */}
+      {/* ABOUT SECTION */}
       <section className="py-16 md:py-24 px-6 md:px-12 bg-white">
         <div className="max-w-7xl mx-auto">
+
           {/* Section Label */}
           <p className="text-[#FF5E14] font-semibold text-sm tracking-wide mb-8">
             ABOUT US
           </p>
 
-          {/* Content Grid */}
           <div className="grid md:grid-cols-2 gap-12 items-center">
-            {/* Left Side - Heading */}
+
+            {/* ⭐ H1 moved to Hero; using H2 here */}
             <div>
               <h2 className="text-5xl md:text-6xl font-bold text-blue-900 leading-tight">
-                YOUR TRUSTED PARTNERS
+                Your Trusted Car Rental & Estate Service Partners in Accra
               </h2>
             </div>
 
-            {/* Right Side - Description */}
             <div>
               <p className="text-[#00235A] text-lg leading-relaxed">
-                At BFT Car Rental & Estate Services, we offer a comprehensive
-                range of services designed to cater to all your mobility and
-                property needs. Whether you're looking to rent a car, manage
-                your fleet efficiently, navigate transport logistics seamlessly,
-                or explore real estate opportunities, we have you covered.
+                BFT Car Rental & Estate Services provides reliable car rentals, 
+                fleet & transport logistics, and professional estate services 
+                across Accra and Ghana. Whether you need a vehicle for business, 
+                travel, or property assistance, our team ensures a seamless and trusted experience.
               </p>
             </div>
           </div>
         </div>
+
+        {/* SERVICES SECTION */}
         <section className="py-16 md:py-24 px-6 md:px-12 bg-white">
           <div className="max-w-7xl mx-auto">
-            {/* Section Label */}
+
             <p className="text-[#FF5E14] font-semibold text-sm tracking-wide mb-8">
               OUR SERVICES
             </p>
 
-            {/* Main Heading */}
             <h2 className="text-5xl md:text-6xl font-bold text-blue-900 leading-tight mb-6">
-              AT BFT CAR RENTAL & ESTATE SERVICES
+              What We Offer at BFT Car Rental & Estate Services
             </h2>
 
-            {/* Subheading */}
             <p className="text-[#00235A] text-lg max-w-3xl">
-              We have specialised in providing a comprehensive range of services
-              including
+              We specialise in car rentals, transport logistics, fleet management, 
+              and estate/property services — providing reliable and efficient support 
+              tailored to your needs.
             </p>
+
           </div>
         </section>
       </section>
+
       <WhyTrustUs />
       <PricingStats />
       <OurTeam />
       <CustomerReviews />
-      {/* Footer */}
+
     </div>
   );
 };

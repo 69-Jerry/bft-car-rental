@@ -35,7 +35,7 @@ export default function Navbar() {
   return (
     <>
       {/* ----------- MOBILE TOP BAR ----------- */}
-      <div className="w-full bg-[#F3F8FF] py-2 flex flex-col items-center md:hidden relative">
+      <div className="w-full bg-[#F3F8FF] py-2 flex flex-col items-center md:hidden sticky top-0 z-50">
         <div className="flex items-center gap-2 text-[#00306B] font-semibold text-sm">
           <Phone className="w-4 h-4" />
           <span>+233 302 524 020</span>
@@ -55,7 +55,7 @@ export default function Navbar() {
       </div>
 
       {/* ----------- MOBILE MAIN NAVBAR ----------- */}
-      <nav className="w-full bg-white py-3 px-4 flex items-center justify-between md:hidden shadow-sm">
+      <nav className="w-full bg-white py-3 px-4 flex items-center justify-between md:hidden shadow-sm sticky top-0 z-50">
         <Link to="/">
           <img src={Logo} alt="Logo" className="h-12 object-contain" />
         </Link>
@@ -69,7 +69,7 @@ export default function Navbar() {
       </nav>
 
       {/* ----------- DESKTOP HEADER TOP BAR ----------- */}
-      <div className="hidden md:block bg-white border-b">
+      <div className="hidden md:block bg-white border-b sticky top-0 z-50">
         <div className="max-w-7xl mx-auto px-6 py-3 flex justify-between items-center">
           <div className="flex items-center gap-6 text-sm text-gray-700">
             <a
@@ -121,11 +121,7 @@ export default function Navbar() {
                 <Linkedin className="w-4 h-4 hover:text-blue-700 cursor-pointer" />
               </a>
 
-              <a
-                href="#"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
+              <a href="#" target="_blank" rel="noopener noreferrer">
                 <Youtube className="w-4 h-4 hover:text-red-600 cursor-pointer" />
               </a>
             </div>
@@ -139,7 +135,7 @@ export default function Navbar() {
 
       {/* ----------- DESKTOP NAVBAR ----------- */}
 
-      <div className="hidden md:block bg-[#00235A]">
+      <div className="hidden md:block bg-[#00235A] sticky top-[48px] z-50">
         <div className="max-w-7xl mx-auto px-6 py-3 flex items-center justify-between">
           {/* Logo */}
           <Link to="/" className="flex-shrink-0">

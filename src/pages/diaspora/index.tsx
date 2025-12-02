@@ -23,6 +23,7 @@ import BotiFalls from "../../assets/images/Boti Falls is a 30m-high waterfall wi
 import Atwea from "../../assets/images/Sanje Waterfalls, Udzungwa Mountains, Tanzania.jpeg";
 import TafiMonkeySanctuary from "../../assets/images/monkysanc.jpeg";
 import KumasiMuseum from "../../assets/images/Manhyia Palace Museum (2025) - All You Need to Know BEFORE You Go (with Reviews).jpeg";
+
 import { Hero } from "./hero";
 
 interface Attraction {
@@ -41,7 +42,7 @@ const attractions: Attraction[] = [
     region: "Central",
     location: "Central Region",
     description:
-      "Famous for its canopy walkway that stretches across the rainforest. A thrilling experience for nature lovers.",
+      "Famous for its rainforest canopy walkway, offering breathtaking views and a thrilling adventure for nature lovers visiting Ghana.",
     image: Kakum,
   },
   {
@@ -50,7 +51,7 @@ const attractions: Attraction[] = [
     region: "Central",
     location: "Cape Coast",
     description:
-      "A UNESCO World Heritage site rich with slave trade history and cultural significance.",
+      "A UNESCO World Heritage site, rich with deep history of the transatlantic slave trade and cultural significance.",
     image: CapeCoast,
   },
   {
@@ -59,7 +60,7 @@ const attractions: Attraction[] = [
     region: "Savannah",
     location: "Damongo",
     description:
-      "Ghana’s largest wildlife reserve, home to elephants, antelopes, and baboons.",
+      "Ghana’s biggest wildlife reserve with elephants, antelopes, baboons, and stunning savannah landscapes.",
     image: Mole,
   },
   {
@@ -68,7 +69,7 @@ const attractions: Attraction[] = [
     region: "Greater Accra",
     location: "Accra",
     description:
-      "Historic resting place of Ghana’s first president, with museums and monuments.",
+      "Historic memorial park and museum honouring Ghana’s first president, Dr. Kwame Nkrumah.",
     image: KNM,
   },
   {
@@ -77,7 +78,7 @@ const attractions: Attraction[] = [
     region: "Greater Accra",
     location: "Accra",
     description:
-      "Accra’s busiest beach with entertainment, food, horseback riding, and nightlife.",
+      "Accra’s most popular beach — ideal for entertainment, music, food, and horseback riding.",
     image: Labadi,
   },
   {
@@ -86,7 +87,7 @@ const attractions: Attraction[] = [
     region: "Greater Accra",
     location: "Ada",
     description:
-      "Popular for river cruises, beach resorts, jet skiing, and calm relaxation.",
+      "A serene getaway where the Volta River meets the ocean — perfect for water sports, relaxation, and boat cruises.",
     image: Ada,
   },
   {
@@ -95,7 +96,7 @@ const attractions: Attraction[] = [
     region: "Western",
     location: "Jomoro",
     description:
-      "A magical village built entirely on stilts over a lagoon. Accessible by canoe.",
+      "A unique stilt village built entirely over water — accessible by canoe and rich in cultural heritage.",
     image: Nzulezu,
   },
   {
@@ -104,7 +105,7 @@ const attractions: Attraction[] = [
     region: "Volta",
     location: "Hohoe",
     description:
-      "The tallest waterfall in Ghana, surrounded by lush greenery and mountain views.",
+      "The tallest waterfall in Ghana, surrounded by lush forest and scenic mountain trails.",
     image: Wli,
   },
   {
@@ -112,7 +113,7 @@ const attractions: Attraction[] = [
     name: "Mount Afadja (Afadjato)",
     region: "Volta",
     location: "Gbledi",
-    description: "Ghana's highest mountain and a popular hiking destination.",
+    description: "Ghana's highest mountain — a rewarding hiking and sightseeing adventure.",
     image: Afadjato,
   },
   {
@@ -121,7 +122,7 @@ const attractions: Attraction[] = [
     region: "Central",
     location: "Elmina",
     description:
-      "One of Africa’s oldest European buildings, with deeply emotional historical tours.",
+      "A historic castle overlooking the ocean, known for emotional guided tours detailing the transatlantic slave trade.",
     image: Elmina,
   },
   {
@@ -130,7 +131,7 @@ const attractions: Attraction[] = [
     region: "Western",
     location: "Busua",
     description:
-      "A clean, beautiful beach popular for swimming, surfing, and relaxation.",
+      "A beautiful beach ideal for swimming, surfing, and peaceful relaxation.",
     image: Busua,
   },
   {
@@ -139,7 +140,7 @@ const attractions: Attraction[] = [
     region: "Upper East",
     location: "Paga",
     description:
-      "A sacred pond where crocodiles live in harmony with humans. Visitors can touch them!",
+      "A unique sacred pond where friendly crocodiles coexist peacefully with humans.",
     image: PagaCrocodile,
   },
   {
@@ -148,7 +149,7 @@ const attractions: Attraction[] = [
     region: "Savannah",
     location: "Larabanga",
     description:
-      "Ghana’s oldest mosque built in 1421, featuring Sudano-Sahelian architecture.",
+      "Ghana’s oldest mosque, built in 1421, showcasing remarkable Sudano-Sahelian architecture.",
     image: Larabanga,
   },
   {
@@ -157,7 +158,7 @@ const attractions: Attraction[] = [
     region: "Greater Accra",
     location: "Shai Hills",
     description:
-      "A mix of wildlife, caves, hills, and rare baboons — great for hiking.",
+      "A beautiful reserve with wildlife, caves, and hiking trails — perfect for adventurers.",
     image: ShaiHills,
   },
   {
@@ -166,7 +167,7 @@ const attractions: Attraction[] = [
     region: "Eastern",
     location: "Aburi",
     description:
-      "A peaceful garden perfect for relaxation, tours, and nature photography.",
+      "A peaceful nature getaway ideal for picnics, guided tours, and photography.",
     image: Aburi,
   },
   {
@@ -175,7 +176,7 @@ const attractions: Attraction[] = [
     region: "Bono East",
     location: "Kintampo",
     description:
-      "A three-level waterfall surrounded by trees, rocks, and serene nature.",
+      "A majestic multi-layered waterfall surrounded by natural rock formations.",
     image: KintampoFalls,
   },
   {
@@ -184,7 +185,7 @@ const attractions: Attraction[] = [
     region: "Eastern",
     location: "Boti",
     description:
-      "Twin waterfalls often called the ‘male and female falls’, with beautiful hiking trails.",
+      "Twin waterfalls with scenic hiking trails, often described as the ‘male and female falls’.",
     image: BotiFalls,
   },
   {
@@ -193,7 +194,7 @@ const attractions: Attraction[] = [
     region: "Ashanti",
     location: "Atwea",
     description:
-      "Known for prayer camps and scenic views. A spiritual and adventurous location.",
+      "A spiritual and scenic mountain known for prayer camps and panoramic views.",
     image: Atwea,
   },
   {
@@ -201,7 +202,7 @@ const attractions: Attraction[] = [
     name: "Tafi Monkey Sanctuary",
     region: "Volta",
     location: "Tafi-Atome",
-    description: "A community-protected forest with friendly Mona monkeys.",
+    description: "A protected forest home to friendly Mona monkeys — great for family visits.",
     image: TafiMonkeySanctuary,
   },
   {
@@ -210,7 +211,7 @@ const attractions: Attraction[] = [
     region: "Ashanti",
     location: "Kumasi",
     description:
-      "The official residence of Asante kings, now a cultural and historical museum.",
+      "A cultural museum showcasing Ashanti royal history and artifacts.",
     image: KumasiMuseum,
   },
 ];
@@ -229,17 +230,27 @@ export default function DiasporaPage() {
   return (
     <div className="min-h-screen bg-background flex flex-col">
       <Hero />
-      <section className="py-20 bg-gray-50 min-h-screen">
+
+      <section
+        aria-label="Ghana tourist attractions and places to visit"
+        className="py-20 bg-gray-50 min-h-screen"
+      >
         <div className="max-w-7xl mx-auto px-6 mt-10">
+
+          {/* ⭐ Strong SEO H1 */}
           <h1 className="text-4xl font-bold text-center text-[#003d7a] mb-6">
-            Explore Ghana — Tourist Attractions
+            Explore Ghana — Top Tourist Attractions & Places to Visit
           </h1>
+
           <p className="text-center text-gray-600 max-w-3xl mx-auto mb-16">
-            Discover Ghana’s rich culture, breathtaking landscapes, and iconic
-            historical sites — spread across all 16 regions of the country.
+            Discover Ghana’s rich culture, breathtaking landscapes, wildlife parks,
+            serene beaches, historical monuments, and natural wonders across all 
+            16 regions.
           </p>
 
-          {/* Grid */}
+          {/* ⭐ SEO-friendly H2 before the grid */}
+          <h2 className="sr-only">List of tourist attractions in Ghana</h2>
+
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
             {currentItems.map((place) => (
               <div
@@ -249,7 +260,7 @@ export default function DiasporaPage() {
                 <div className="h-56 w-full overflow-hidden">
                   <img
                     src={place.image}
-                    alt={place.name}
+                    alt={`${place.name} in ${place.location}, ${place.region} Region, Ghana`}
                     className="w-full h-full object-cover group-hover:scale-110 transition duration-500"
                   />
                 </div>
@@ -258,7 +269,9 @@ export default function DiasporaPage() {
                   <h3 className="text-xl font-bold text-[#003d7a] mb-1">
                     {place.name}
                   </h3>
-                  <p className="text-sm text-gray-500 mb-3">{place.location}</p>
+                  <p className="text-sm text-gray-500 mb-3">
+                    {place.location}, {place.region} Region
+                  </p>
 
                   <p className="text-gray-700 text-sm leading-relaxed mb-6">
                     {place.description}
