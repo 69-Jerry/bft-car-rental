@@ -1043,7 +1043,7 @@ export default function DiasporaPage() {
                 </div>
                 <div className="flex gap-2 mt-4">
                   <button
-                    onClick={() => window.open("tel:+233000000000", "_self")}
+                    onClick={() => window.open("tel:+233244579498", "_self")}
                     className="flex-1 bg-[#F26722] hover:bg-[#D9571C] text-white font-medium py-2 px-4 rounded-lg transition duration-200 flex items-center justify-center gap-2"
                   >
                     <svg
@@ -1064,7 +1064,7 @@ export default function DiasporaPage() {
                   </button>
                   <button
                     onClick={() =>
-                      (window.location.href = `mailto:info@bftcarrental.com?subject=Enquiry about ${attraction.name}&body=Hi, I would like to enquire about ${attraction.name} in ${attraction.region}.`)
+                      (window.location.href = `mailto:info.mybftservices@gmail.com?subject=Enquiry about ${attraction.name}&body=Hi, I would like to enquire about ${attraction.name} in ${attraction.region}.`)
                     }
                     className="flex-1 bg-[#00235A] hover:bg-[#001A44] text-white font-medium py-2 px-4 rounded-lg transition duration-200 flex items-center justify-center gap-2"
                   >
