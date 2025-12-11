@@ -311,6 +311,137 @@ const attractions: Attraction[] = [
     image: "https://bukarestaurant.com/images/main-1.jpg",
     category: "Restaurant",
   },
+  {
+    id: 86,
+    name: "MAD Club",
+    region: "Greater Accra",
+    location: "East Legon",
+    description:
+      "One of the newest high-end clubs in Accra with premium bottle service and VIP experience.",
+    image:
+      "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0f/59/5e/1a/mainfloor-showcase.jpg?w=800&h=400&s=1",
+    category: "Club",
+  },
+  {
+    id: 87,
+    name: "Kruna The Club",
+    region: "Greater Accra",
+    location: "Osu",
+    description:
+      "Very popular with young crowd featuring lively events and energetic atmosphere.",
+    image:
+      "https://tortoisepath.com/wp-content/uploads/2023/09/KRUNA-The-Club-Accra-Ghana-TortoisePathcom-2-jpeg.webp ",
+    category: "Club",
+  },
+  // {
+  //   id: 88,
+  //   name: "Garage Lounge & Nightclub",
+  //   region: "Greater Accra",
+  //   location: "Airport Residential",
+  //   description:
+  //     "Gaining popularity with modern vibe, great cocktails, and weekend parties.",
+  //   image:
+  //     "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/16/a7/b8/c9/garage-lounge.jpg?w=900&h=500&s=1",
+  //   category: "Club",
+  // },
+  {
+    id: 89,
+    name: "Moonlight Nightclub",
+    region: "Greater Accra",
+    location: "East Legon",
+    description:
+      "Newer spot with growing buzz, featuring top DJs and themed party nights.",
+    image:
+      "https://cdn.prod.website-files.com/60b00c7676794f6159eb4bf0/66d77bab914895b6b31e1ff9_66d77b8fc7675261342841.jpeg",
+    category: "Club",
+  },
+  // {
+  //   id: 90,
+  //   name: "Enclave",
+  //   region: "Greater Accra",
+  //   location: "Osu",
+  //   description:
+  //     "Trendy, music-driven nightlife spot perfect for dancing and socializing.",
+  //   image: "x",
+  //   category: "Club",
+  // },
+  {
+    id: 91,
+    name: "Twist Night Club",
+    region: "Greater Accra",
+    location: "Labone",
+    description:
+      "One of Accra's longest-running top clubs with consistent high-energy entertainment.",
+    image:
+      "https://tortoisepath.com/wp-content/uploads/2021/11/Twist-Night-Club-Accra-TortoisePath.com-00003.jpeg",
+    category: "Club",
+  },
+  {
+    id: 92,
+    name: "Carbon Nightclub",
+    region: "Greater Accra",
+    location: "Airport City",
+    description:
+      "Known for upscale luxury experience with VIP sections and premium bottle service.",
+    image:
+      "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/11/0b/a3/b1/main-club.jpg?w=1200&h=-1&s=1",
+    category: "Club",
+  },
+  {
+    id: 93,
+    name: "Play Nightclub",
+    region: "Greater Accra",
+    location: "Osu",
+    description:
+      "Great for dancing and weekend energy with amazing sound system and lighting.",
+    image:
+      "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/28/73/a6/cd/play-club-ghana-is-the.jpg?w=900&h=500&s=1",
+    category: "Club",
+  },
+  {
+    id: 94,
+    name: "Bloom Bar",
+    region: "Greater Accra",
+    location: "Osu",
+    description:
+      "Lounge/bar with nightlife vibe, always buzzing with great cocktails and live DJs.",
+    image:
+      "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/16/8a/f4/89/bloombar-is-a-vibe-everyone.jpg?w=500&h=-1&s=1",
+    category: "Club",
+  },
+  {
+    id: 95,
+    name: "Skybar 25",
+    region: "Greater Accra",
+    location: "Airport City",
+    description:
+      "Rooftop lounge offering premium nightlife experience with stunning city views.",
+    image:
+      "https://tortoisepath.com/wp-content/uploads/2021/11/Sky-Bar-25-Accra-TortoisePath.com-00001.jpeg",
+    category: "Club",
+  },
+  {
+    id: 96,
+    name: "Front/Back",
+    region: "Greater Accra",
+    location: "Osu",
+    description:
+      "Exclusive membership vibe, popular with creatives and artists.",
+    image:
+      "https://www.theworlds50best.com/discovery/filestore/jpg/Front_Back-Accra-Ghana-3.jpg",
+    category: "Club",
+  },
+  {
+    id: 97,
+    name: "Ace Tantra",
+    region: "Greater Accra",
+    location: "Osu",
+    description:
+      "Afrobeat-heavy energised nightlife, perfect for dancing to African rhythms.",
+    image:
+      "https://kentetv.com/wp-content/uploads/2023/05/ace-tantra.jpg",
+    category: "Club",
+  },
 
   // ASHANTI
   {
@@ -1031,9 +1162,9 @@ export default function DiasporaPage() {
     "Hotel",
     "Restaurant",
     "Playground",
+    "Club",
   ];
 
-  // Reset to page 1 when filters change
   useEffect(() => {
     setCurrentPage(1);
   }, [searchTerm, selectedRegion, selectedCategory]);
@@ -1130,95 +1261,135 @@ export default function DiasporaPage() {
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-          {currentAttractions.map((attraction) => (
-            <div
-              key={attraction.id}
-              className="border rounded-lg overflow-hidden shadow hover:shadow-lg transition duration-300 flex flex-col"
-            >
-              <div
-                className="relative cursor-pointer"
-                onClick={() => setSelectedAttraction(attraction)}
-              >
-                <img
-                  src={
-                    typeof attraction.image === "string"
-                      ? attraction.image
-                      : attraction.image.src
-                  }
-                  alt={attraction.name}
-                  className="w-full h-48 object-cover"
-                />
-                <span
-                  className={`absolute top-3 right-3 px-3 py-1 rounded-full text-xs font-semibold text-white shadow-lg ${
-                    attraction.category === "Attraction"
-                      ? "bg-purple-600"
-                      : attraction.category === "Beach"
-                      ? "bg-cyan-600"
-                      : attraction.category === "Hotel"
-                      ? "bg-amber-600"
-                      : attraction.category === "Restaurant"
-                      ? "bg-pink-600"
-                      : attraction.category === "Playground"
-                      ? "bg-green-600"
-                      : "bg-gray-600"
-                  }`}
+          {currentAttractions.length === 0 ? (
+            <div className="col-span-full text-center py-16">
+              <div className="flex flex-col items-center justify-center">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="h-24 w-24 text-gray-300 mb-4"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
                 >
-                  {attraction.category}
-                </span>
-              </div>
-              <div className="p-4 flex flex-col flex-grow">
-                <div className="flex-grow">
-                  <h3 className="text-lg font-semibold">{attraction.name}</h3>
-                  <p className="text-sm text-gray-500">{attraction.region}</p>
-                  <p className="mt-2 text-gray-700">{attraction.description}</p>
-                </div>
-                <div className="flex gap-2 mt-4">
-                  <button
-                    onClick={() => window.open("tel:+233244579498", "_self")}
-                    className="flex-1 bg-[#F26722] hover:bg-[#D9571C] text-white font-medium py-2 px-4 rounded-lg transition duration-200 flex items-center justify-center gap-2"
-                  >
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      strokeWidth={2}
-                      stroke="currentColor"
-                      className="w-4 h-4"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z"
-                      />
-                    </svg>
-                    Call
-                  </button>
-                  <button
-                    onClick={() =>
-                      (window.location.href = `mailto:info.mybftservices@gmail.com?subject=Enquiry about ${attraction.name}&body=Hi, I would like to enquire about ${attraction.name} in ${attraction.region}.`)
-                    }
-                    className="flex-1 bg-[#00235A] hover:bg-[#001A44] text-white font-medium py-2 px-4 rounded-lg transition duration-200 flex items-center justify-center gap-2"
-                  >
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      strokeWidth={2}
-                      stroke="currentColor"
-                      className="w-4 h-4"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75"
-                      />
-                    </svg>
-                    Enquire
-                  </button>
-                </div>
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={1.5}
+                    d="M9.172 16.172a4 4 0 015.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+                  />
+                </svg>
+                <h3 className="text-2xl font-semibold text-gray-700 mb-2">
+                  No Results Found
+                </h3>
+                <p className="text-gray-500 max-w-md mb-4">
+                  We couldn't find any attractions matching your search
+                  criteria. Try adjusting your filters or search terms.
+                </p>
+                <button
+                  onClick={() => {
+                    setSearchTerm("");
+                    setSelectedRegion("");
+                    setSelectedCategory("");
+                  }}
+                  className="bg-[#F26722] hover:bg-[#D9571C] text-white font-medium py-2 px-6 rounded-lg transition duration-200"
+                >
+                  Clear Filters
+                </button>
               </div>
             </div>
-          ))}
+          ) : (
+            currentAttractions.map((attraction) => (
+              <div
+                key={attraction.id}
+                className="border rounded-lg overflow-hidden shadow hover:shadow-lg transition duration-300 flex flex-col"
+              >
+                <div
+                  className="relative cursor-pointer"
+                  onClick={() => setSelectedAttraction(attraction)}
+                >
+                  <img
+                    src={
+                      typeof attraction.image === "string"
+                        ? attraction.image
+                        : attraction.image.src
+                    }
+                    alt={attraction.name}
+                    className="w-full h-48 object-cover"
+                  />
+                  <span
+                    className={`absolute top-3 right-3 px-3 py-1 rounded-full text-xs font-semibold text-white shadow-lg ${
+                      attraction.category === "Attraction"
+                        ? "bg-purple-600"
+                        : attraction.category === "Beach"
+                        ? "bg-cyan-600"
+                        : attraction.category === "Hotel"
+                        ? "bg-amber-600"
+                        : attraction.category === "Restaurant"
+                        ? "bg-pink-600"
+                        : attraction.category === "Playground"
+                        ? "bg-green-600"
+                        : "bg-gray-600"
+                    }`}
+                  >
+                    {attraction.category}
+                  </span>
+                </div>
+                <div className="p-4 flex flex-col flex-grow">
+                  <div className="flex-grow">
+                    <h3 className="text-lg font-semibold">{attraction.name}</h3>
+                    <p className="text-sm text-gray-500">{attraction.region}</p>
+                    <p className="mt-2 text-gray-700">
+                      {attraction.description}
+                    </p>
+                  </div>
+                  <div className="flex gap-2 mt-4">
+                    <button
+                      onClick={() => window.open("tel:+233244579498", "_self")}
+                      className="flex-1 bg-[#F26722] hover:bg-[#D9571C] text-white font-medium py-2 px-4 rounded-lg transition duration-200 flex items-center justify-center gap-2"
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        strokeWidth={2}
+                        stroke="currentColor"
+                        className="w-4 h-4"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z"
+                        />
+                      </svg>
+                      Call
+                    </button>
+                    <button
+                      onClick={() =>
+                        (window.location.href = `mailto:info.mybftservices@gmail.com?subject=Enquiry about ${attraction.name}&body=Hi, I would like to enquire about ${attraction.name} in ${attraction.region}.`)
+                      }
+                      className="flex-1 bg-[#00235A] hover:bg-[#001A44] text-white font-medium py-2 px-4 rounded-lg transition duration-200 flex items-center justify-center gap-2"
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        strokeWidth={2}
+                        stroke="currentColor"
+                        className="w-4 h-4"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75"
+                        />
+                      </svg>
+                      Enquire
+                    </button>
+                  </div>
+                </div>
+              </div>
+            ))
+          )}
         </div>
 
         {totalPages > 1 && (
