@@ -50,7 +50,7 @@ const attractions: Attraction[] = [
     location: "Cape Coast",
     description: "Rainforest canopy walkway and wildlife.",
     image: Kakum,
-   
+
     category: "Attraction",
   },
   {
@@ -60,7 +60,7 @@ const attractions: Attraction[] = [
     location: "Cape Coast",
     description: "UNESCO site with deep history.",
     image: CapeCoast,
-    
+
     category: "Attraction",
   },
   {
@@ -79,7 +79,8 @@ const attractions: Attraction[] = [
     region: "Central",
     location: "Cape Coast",
     description: "Unique accommodation with crocodile pond.",
-    image: "https://cf.bstatic.com/xdata/images/hotel/max500/135742571.jpg?k=7e8449e29a4220068860f60f70a0939121c7336e8ddf342e1f808940f36c8f23&o=&hp=1",
+    image:
+      "https://cf.bstatic.com/xdata/images/hotel/max500/135742571.jpg?k=7e8449e29a4220068860f60f70a0939121c7336e8ddf342e1f808940f36c8f23&o=&hp=1",
     category: "Hotel",
   },
   {
@@ -99,8 +100,7 @@ const attractions: Attraction[] = [
     location: "Anomabo",
     description:
       "A historic and scenic beach near Anomabo Fort and local fishing villages.",
-    image:
-      "https://anomabo.com/assets/images/gallery/Beachfront.png",
+    image: "https://anomabo.com/assets/images/gallery/Beachfront.png",
     category: "Beach",
   },
   {
@@ -142,7 +142,8 @@ const attractions: Attraction[] = [
     location: "Busua",
     description:
       "Relaxing beach resort perfect for surfing and coastal relaxation.",
-    image: "https://lh3.googleusercontent.com/p/AF1QipPRL4giXGGHgCY_z5YBnD7EQCnYGgGh5j1utKP1=s1360-w1360-h1020-rw",
+    image:
+      "https://lh3.googleusercontent.com/p/AF1QipPRL4giXGGHgCY_z5YBnD7EQCnYGgGh5j1utKP1=s1360-w1360-h1020-rw",
     category: "Hotel",
   },
   {
@@ -151,7 +152,8 @@ const attractions: Attraction[] = [
     region: "Central",
     location: "Cape Coast",
     description: "Cozy cafe with fresh seafood and stunning ocean views.",
-    image: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/16/53/69/c7/casual-protected-atmosphere.jpg?w=900&h=500&s=1",
+    image:
+      "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/16/53/69/c7/casual-protected-atmosphere.jpg?w=900&h=500&s=1",
     category: "Restaurant",
   },
 
@@ -193,7 +195,8 @@ const attractions: Attraction[] = [
     location: "Bortianor",
     description:
       "Secluded beach resort accessible by canoe, perfect for weekend getaways.",
-    image: "https://bojobeachresort.com/wp-content/uploads/2021/12/Mainland.jpg",
+    image:
+      "https://bojobeachresort.com/wp-content/uploads/2021/12/Mainland.jpg",
     category: "Beach",
   },
   {
@@ -235,7 +238,7 @@ const attractions: Attraction[] = [
     location: "Accra",
     description: "Historic memorial and museum.",
     image: KNM,
-    
+
     category: "Attraction",
   },
   {
@@ -244,7 +247,8 @@ const attractions: Attraction[] = [
     region: "Greater Accra",
     location: "Accra",
     description: "Luxury hotel in Accra.",
-    image: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0a/8c/65/07/pool-image.jpg?w=900&h=-1&s=1",
+    image:
+      "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0a/8c/65/07/pool-image.jpg?w=900&h=-1&s=1",
     category: "Hotel",
   },
   {
@@ -304,8 +308,7 @@ const attractions: Attraction[] = [
     location: "East Legon",
     description:
       "Nigerian restaurant famous for jollof rice and authentic West African flavors.",
-    image:
-      "https://bukarestaurant.com/images/main-1.jpg",
+    image: "https://bukarestaurant.com/images/main-1.jpg",
     category: "Restaurant",
   },
 
@@ -336,7 +339,8 @@ const attractions: Attraction[] = [
     region: "Ashanti",
     location: "Kumasi",
     description: "Comfortable hotel with modern amenities.",
-    image: "https://www.hotelscombined.com/rimg/himg/2a/04/35/agoda-188634-876754339-563010.jpg?width=968&height=607&crop=true",
+    image:
+      "https://www.hotelscombined.com/rimg/himg/2a/04/35/agoda-188634-876754339-563010.jpg?width=968&height=607&crop=true",
     category: "Hotel",
   },
   {
@@ -345,7 +349,8 @@ const attractions: Attraction[] = [
     region: "Ashanti",
     location: "Kumasi",
     description: "Local dishes and continental menu.",
-    image: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/19/fb/31/e4/our-new-location.jpg?w=1200&h=-1&s=1",
+    image:
+      "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/19/fb/31/e4/our-new-location.jpg?w=1200&h=-1&s=1",
     category: "Restaurant",
   },
   {
@@ -374,7 +379,8 @@ const attractions: Attraction[] = [
     region: "Ashanti",
     location: "Kumasi",
     description: "Trendy rooftop restaurant and bar with panoramic city views.",
-    image: "https://lavie-dc.com/wp-content/uploads/2018/06/DSC_0243-min-1300x865.jpg",
+    image:
+      "https://lavie-dc.com/wp-content/uploads/2018/06/DSC_0243-min-1300x865.jpg",
     category: "Restaurant",
   },
 
@@ -386,7 +392,7 @@ const attractions: Attraction[] = [
     location: "Bono",
     description: "Scenic waterfall, quieter than Kintampo.",
     image:
-      "https://upload.wikimedia.org/wikipedia/commons/2/25/Fuller_Falls_Ghana.jpg",
+      "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0b/25/05/12/fuller-falls.jpg?w=1200&h=-1&s=1",
     category: "Attraction",
   },
   {
@@ -397,30 +403,30 @@ const attractions: Attraction[] = [
     description:
       "Modern hotel in Sunyani with conference facilities and restaurant.",
     image:
-      "https://cf.bstatic.com/xdata/images/hotel/max1024x768/234567890.jpg",
+      "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0f/7d/0b/67/eusbett-hotel.jpg?w=900&h=500&s=1",
     category: "Hotel",
   },
-  {
-    id: 57,
-    name: "Metro Hotel",
-    region: "Bono",
-    location: "Sunyani",
-    description:
-      "Comfortable accommodation with friendly service in Bono capital.",
-    image: "https://visitghana.com/wp-content/uploads/2020/08/Metro-Hotel.jpg",
-    category: "Hotel",
-  },
-  {
-    id: 58,
-    name: "Kosy's Kitchen",
-    region: "Bono",
-    location: "Sunyani",
-    description:
-      "Local restaurant serving authentic Ghanaian and continental dishes.",
-    image:
-      "https://visitghana.com/wp-content/uploads/2021/02/Kosys-Kitchen.jpg",
-    category: "Restaurant",
-  },
+  // {
+  //   id: 57,
+  //   name: "Metro Hotel",
+  //   region: "Bono",
+  //   location: "Sunyani",
+  //   description:
+  //     "Comfortable accommodation with friendly service in Bono capital.",
+  //   image: "https://visitghana.com/wp-content/uploads/2020/08/Metro-Hotel.jpg",
+  //   category: "Hotel",
+  // },
+  // {
+  //   id: 58,
+  //   name: "Kozy's Kitchen",
+  //   region: "Bono",
+  //   location: "Sunyani",
+  //   description:
+  //     "Local restaurant serving authentic Ghanaian and continental dishes.",
+  //   image:
+  //     "https://visitghana.com/wp-content/uploads/2021/02/Kosys-Kitchen.jpg",
+  //   category: "Restaurant",
+  // },
 
   // BONO EAST
   {
@@ -443,31 +449,31 @@ const attractions: Attraction[] = [
     region: "Bono East",
     location: "Kintampo",
     description: "Eco-lodge near waterfalls.",
-    image: "https://visitghana.com/kintampo-lodge.jpg",
+    image: "https://okumahhotels.com/kintampo/images/car_park_KINTAMPO_03.jpg",
     category: "Hotel",
   },
-  {
-    id: 59,
-    name: "Sonzele Restaurant",
-    region: "Bono East",
-    location: "Techiman",
-    description:
-      "Popular restaurant in Techiman serving local and continental cuisine.",
-    image:
-      "https://visitghana.com/wp-content/uploads/2021/03/Sonzele-Restaurant.jpg",
-    category: "Restaurant",
-  },
-  {
-    id: 60,
-    name: "Goodness Hotel",
-    region: "Bono East",
-    location: "Techiman",
-    description:
-      "Comfortable hotel with modern facilities in the market hub of Bono East.",
-    image:
-      "https://cf.bstatic.com/xdata/images/hotel/max1024x768/345678901.jpg",
-    category: "Hotel",
-  },
+  // {
+  //   id: 59,
+  //   name: "Sonzele Restaurant",
+  //   region: "Bono East",
+  //   location: "Techiman",
+  //   description:
+  //     "Popular restaurant in Techiman serving local and continental cuisine.",
+  //   image:
+  //     "https://visitghana.com/wp-content/uploads/2021/03/Sonzele-Restaurant.jpg",
+  //   category: "Restaurant",
+  // },
+  // {
+  //   id: 60,
+  //   name: "Goodness Hotel",
+  //   region: "Bono East",
+  //   location: "Techiman",
+  //   description:
+  //     "Comfortable hotel with modern facilities in the market hub of Bono East.",
+  //   image:
+  //     "https://cf.bstatic.com/xdata/images/hotel/max1024x768/345678901.jpg",
+  //   category: "Hotel",
+  // },
 
   // EASTERN
   {
@@ -505,7 +511,7 @@ const attractions: Attraction[] = [
     location: "Akosombo",
     description: "Riverside club with activities.",
     image:
-      "https://media-cdn.tripadvisor.com/media/photo-s/12/ae/40/4c/sajuna-beach-club.jpg",
+      "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/05/05/8d/69/sajuna-beach-club.jpg?w=1200&h=1200&s=1",
     category: "Beach",
   },
   {
@@ -514,7 +520,8 @@ const attractions: Attraction[] = [
     region: "Eastern",
     location: "Akosombo",
     description: "Popular hotel by the lake.",
-    image: "https://akosombohotel.com/photo.jpg",
+    image:
+      "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/06/69/fc/54/akosombo-continental.jpg?w=900&h=500&s=1",
     category: "Hotel",
   },
   {
@@ -523,9 +530,75 @@ const attractions: Attraction[] = [
     region: "Eastern",
     location: "Aburi",
     description: "A scenic hilltop restaurant with mountain views.",
-    image: "https://visitghana.com/wp-content/uploads/2021/01/Hillburi.jpg",
+    image:
+      "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1b/79/e9/f6/hillburi-aburi.jpg?w=900&h=500&s=1",
     category: "Restaurant",
   },
+  {
+    id: 74,
+    name: "Bridge View Hotel",
+    region: "Eastern",
+    location: "Adomi Bridge, Atimpoku",
+    description:
+      "Stunning hotel with breathtaking views of the Volta River and Adomi Bridge.",
+    image:
+      "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/28/1f/0f/30/bridgeview-resort.jpg?w=900&h=500&s=1",
+    category: "Hotel",
+  },
+  {
+    id: 75,
+    name: "Royal Senchi Resort",
+    region: "Eastern",
+    location: "Akosombo",
+    description:
+      "Luxury lakeside resort with spa, pools, and water sports on the Volta Lake.",
+    image:
+      "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0e/b7/09/cd/the-senchi-pool-at-night.jpg?w=900&h=500&s=1",
+    category: "Hotel",
+  },
+  {
+    id: 76,
+    name: "Peduase Valley Resort",
+    region: "Eastern",
+    location: "Peduase",
+    description:
+      "Serene resort with golf course, spa facilities, and mountain views.",
+    image:
+      "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0e/9c/72/c5/pool-view.jpg?w=900&h=500&s=1",
+    category: "Hotel",
+  },
+  {
+    id: 77,
+    name: "Miklin Hotel",
+    region: "Eastern",
+    location: "Nsawam",
+    description:
+      "Modern hotel with conference facilities and restaurant in Nsawam.",
+    image:
+      "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/12/5a/35/dc/miklin-hotel.jpg?w=1200&h=1200&s=1",
+    category: "Hotel",
+  },
+  {
+    id: 78,
+    name: "Volta Lodge",
+    region: "Eastern",
+    location: "Akosombo",
+    description: "Affordable lakeside accommodation with restaurant and bar.",
+    image:
+      "https://b3324290.smushcdn.com/3324290/wp-content/uploads/2023/10/Volta-Hotel-Akosombo-Photos-11.jpg?lossy=0&strip=1&webp=1",
+    category: "Hotel",
+  },
+  // {
+  //   id: 79,
+  //   name: "Aburi Taste Restaurant",
+  //   region: "Eastern",
+  //   location: "Aburi",
+  //   description:
+  //     "Local restaurant serving traditional Ghanaian dishes and continental cuisine.",
+  //   image:
+  //     "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/13/a5/b6/c7/aburi-taste.jpg?w=900&h=500&s=1",
+  //   category: "Restaurant",
+  // },
 
   // NORTHERN
   {
@@ -558,25 +631,25 @@ const attractions: Attraction[] = [
   },
   {
     id: 30,
-    name: "Northern Star Hotel (Tamale)",
+    name: "Nyaji Star Hotel",
     region: "Northern",
     location: "Tamale",
     description: "Recognized hotel suitable for business and leisure.",
     image:
-      "https://cf.bstatic.com/xdata/images/hotel/max1024x768/325987654.jpg",
+      "https://cf.bstatic.com/xdata/images/hotel/max1024x768/737634474.jpg?k=eac8a3dafc4bd3aad918760bbf2facaa237de5787f459f2f136be2e2ee4b8a73&o=",
     category: "Hotel",
   },
-  {
-    id: 31,
-    name: "Wooden Tavern Restaurant",
-    region: "Northern",
-    location: "Tamale",
-    description:
-      "Cozy spot offering local Northern Ghana delicacies and grills.",
-    image:
-      "https://visitghana.com/wp-content/uploads/2020/04/Wooden-Tavern.jpg",
-    category: "Restaurant",
-  },
+  // {
+  //   id: 31,
+  //   name: "Wooden Tavern Restaurant",
+  //   region: "Northern",
+  //   location: "Tamale",
+  //   description:
+  //     "Cozy spot offering local Northern Ghana delicacies and grills.",
+  //   image:
+  //     "https://visitghana.com/wp-content/uploads/2020/04/Wooden-Tavern.jpg",
+  //   category: "Restaurant",
+  // },
 
   // NORTH EAST
   {
@@ -586,29 +659,29 @@ const attractions: Attraction[] = [
     location: "Gambaga",
     description: "Scenic escarpment and historical sites.",
     image:
-      "https://upload.wikimedia.org/wikipedia/commons/5/52/Gambaga_Escarpment.jpg",
+      "https://wp-haunsinafrica.s3.amazonaws.com/wp-content/uploads/sites/10/2019/06/18011114/20170808-whaun-gingana-mountain-escarpment-north-east-region-ghana-0123-1024x767.jpg",
     category: "Attraction",
   },
-  {
-    id: 69,
-    name: "Nalerigu Guest House",
-    region: "North East",
-    location: "Nalerigu",
-    description: "Simple and comfortable accommodation near historical sites.",
-    image:
-      "https://visitghana.com/wp-content/uploads/2020/10/Nalerigu-Guest.jpg",
-    category: "Hotel",
-  },
-  {
-    id: 70,
-    name: "Walewale Canteen",
-    region: "North East",
-    location: "Walewale",
-    description: "Local eatery serving traditional Northern Ghanaian dishes.",
-    image:
-      "https://visitghana.com/wp-content/uploads/2021/09/Walewale-Canteen.jpg",
-    category: "Restaurant",
-  },
+  // {
+  //   id: 69,
+  //   name: "Nalerigu Guest House",
+  //   region: "North East",
+  //   location: "Nalerigu",
+  //   description: "Simple and comfortable accommodation near historical sites.",
+  //   image:
+  //     "https://visitghana.com/wp-content/uploads/2020/10/Nalerigu-Guest.jpg",
+  //   category: "Hotel",
+  // },
+  // {
+  //   id: 70,
+  //   name: "Walewale Canteen",
+  //   region: "North East",
+  //   location: "Walewale",
+  //   description: "Local eatery serving traditional Northern Ghanaian dishes.",
+  //   image:
+  //     "https://visitghana.com/wp-content/uploads/2021/09/Walewale-Canteen.jpg",
+  //   category: "Restaurant",
+  // },
 
   // OTI
   {
@@ -617,7 +690,7 @@ const attractions: Attraction[] = [
     region: "Oti",
     location: "Jasikan",
     description: "Beautiful layered waterfall.",
-    image: "https://upload.wikimedia.org/wikipedia/commons/4/49/Ote_Falls.jpg",
+    image: "https://graphiconline.com/images/2023/jun/05/otewaterfallnew.jpg",
     category: "Attraction",
   },
   {
@@ -627,19 +700,19 @@ const attractions: Attraction[] = [
     location: "Jasikan",
     description: "Eco-friendly lodge near waterfalls and natural attractions.",
     image:
-      "https://visitghana.com/wp-content/uploads/2020/11/Jasikan-Lodge.jpg",
+      "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/12/41/b6/1d/main-entrace-kikis-court.jpg?w=1200&h=-1&s=1",
     category: "Hotel",
   },
-  {
-    id: 72,
-    name: "Kadjebi Kitchen",
-    region: "Oti",
-    location: "Kadjebi",
-    description: "Family restaurant with homemade Ghanaian food.",
-    image:
-      "https://visitghana.com/wp-content/uploads/2021/10/Kadjebi-Kitchen.jpg",
-    category: "Restaurant",
-  },
+  // {
+  //   id: 72,
+  //   name: "Kadjebi Kitchen",
+  //   region: "Oti",
+  //   location: "Kadjebi",
+  //   description: "Family restaurant with homemade Ghanaian food.",
+  //   image:
+  //     "https://visitghana.com/wp-content/uploads/2021/10/Kadjebi-Kitchen.jpg",
+  //   category: "Restaurant",
+  // },
 
   // SAVANNAH
   {
@@ -656,27 +729,27 @@ const attractions: Attraction[] = [
     ],
     category: "Attraction",
   },
-  {
-    id: 35,
-    name: "Mali's Lodge Restaurant",
-    region: "Savannah",
-    location: "Mole",
-    description:
-      "A serene restaurant inside Mole offering continental meals with wildlife views.",
-    image: "https://visitghana.com/wp-content/uploads/2020/05/Malis-Lodge.jpg",
-    category: "Restaurant",
-  },
-  {
-    id: 73,
-    name: "Mole Motel",
-    region: "Savannah",
-    location: "Mole",
-    description:
-      "Historic motel with panoramic views of Mole National Park wildlife.",
-    image:
-      "https://cf.bstatic.com/xdata/images/hotel/max1024x768/567890123.jpg",
-    category: "Hotel",
-  },
+  // {
+  //   id: 35,
+  //   name: "Mali's Lodge Restaurant",
+  //   region: "Savannah",
+  //   location: "Mole",
+  //   description:
+  //     "A serene restaurant inside Mole offering continental meals with wildlife views.",
+  //   image: "https://visitghana.com/wp-content/uploads/2020/05/Malis-Lodge.jpg",
+  //   category: "Restaurant",
+  // },
+  // {
+  //   id: 73,
+  //   name: "Mole Motel",
+  //   region: "Savannah",
+  //   location: "Mole",
+  //   description:
+  //     "Historic motel with panoramic views of Mole National Park wildlife.",
+  //   image:
+  //     "https://cf.bstatic.com/xdata/images/hotel/max1024x768/567890123.jpg",
+  //   category: "Hotel",
+  // },
 
   // UPPER EAST
   {
@@ -686,7 +759,7 @@ const attractions: Attraction[] = [
     location: "Tongo",
     description: "Rocky hills with views and cultural sites.",
     image:
-      "https://upload.wikimedia.org/wikipedia/commons/8/8b/Tongo_Hills.jpg",
+      "https://tortoisepath.com/wp-content/uploads/2025/03/Tongo-Hills-and-Tengzug-Shrine-Yinduri-Ghana-TortoisePathcom-3-1024x768.jpeg",
     category: "Attraction",
   },
   {
@@ -696,52 +769,53 @@ const attractions: Attraction[] = [
     location: "Bolgatanga",
     description:
       "A popular restaurant offering continental and local meals in luxury setting.",
-    image: "https://visitghana.com/wp-content/uploads/2021/04/Akayet.jpg",
+    image:
+      "https://lh3.googleusercontent.com/gps-cs-s/AG0ilSxY9UHNHpJMUmaq3vd1stRDgudy4GmyVHPiUAFYLB9fhsmsd1s3xD3QFPM8YnuxnJ-QbfaAVQtv6K_GHpbI8ymzCnTzil01kyPKZfbIHta-P1hezwJkKft-aIkT7m5r5CIVPafH7g=s1360-w1360-h1020-rw",
     category: "Restaurant",
   },
-  {
-    id: 38,
-    name: "Upper East Boutique Lodge",
-    region: "Upper East",
-    location: "Bolgatanga",
-    description:
-      "Charming lodge offering a local cultural experience in Upper East Ghana.",
-    image: "https://example.com/upper-east-lodge.jpg",
-    category: "Hotel",
-  },
+  // {
+  //   id: 38,
+  //   name: "Upper East Boutique Lodge",
+  //   region: "Upper East",
+  //   location: "Bolgatanga",
+  //   description:
+  //     "Charming lodge offering a local cultural experience in Upper East Ghana.",
+  //   image: "https://example.com/upper-east-lodge.jpg",
+  //   category: "Hotel",
+  // },
 
   // UPPER WEST
-  {
-    id: 39,
-    name: "Wechiau Hippo Sanctuary",
-    region: "Upper West",
-    location: "Wechiau",
-    description: "Hippo viewing on the Black Volta.",
-    image:
-      "https://visitghana.com/wp-content/uploads/2018/03/Wechiau-Hippo-Sanctuary.jpg",
-    category: "Attraction",
-  },
-  {
-    id: 40,
-    name: "Blue Sky Hotel Restaurant",
-    region: "Upper West",
-    location: "Wa",
-    description:
-      "A well-known restaurant offering Ghanaian, continental, and buffet options.",
-    image: "https://visitghana.com/wp-content/uploads/2020/06/Blue-Sky.jpg",
-    category: "Restaurant",
-  },
-  {
-    id: 41,
-    name: "Wechiau Riverside Lodge",
-    region: "Upper West",
-    location: "Wechiau",
-    description:
-      "Simple riverside accommodation ideal for visiting the hippo sanctuary.",
-    image:
-      "https://visitghana.com/wp-content/uploads/2018/03/Wechiau-Hippo-Sanctuary.jpg",
-    category: "Hotel",
-  },
+  // {
+  //   id: 39,
+  //   name: "Wechiau Hippo Sanctuary",
+  //   region: "Upper West",
+  //   location: "Wechiau",
+  //   description: "Hippo viewing on the Black Volta.",
+  //   image:
+  //     "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/25/0b/ea/9d/wichiau-hippo-sanctuary.jpg?w=1200&h=-1&s=1",
+  //   category: "Attraction",
+  // },
+  // {
+  //   id: 40,
+  //   name: "Blue Sky Hotel Restaurant",
+  //   region: "Upper West",
+  //   location: "Wa",
+  //   description:
+  //     "A well-known restaurant offering Ghanaian, continental, and buffet options.",
+  //   image: "https://visitghana.com/wp-content/uploads/2020/06/Blue-Sky.jpg",
+  //   category: "Restaurant",
+  // },
+  // {
+  //   id: 41,
+  //   name: "Wechiau Riverside Lodge",
+  //   region: "Upper West",
+  //   location: "Wechiau",
+  //   description:
+  //     "Simple riverside accommodation ideal for visiting the hippo sanctuary.",
+  //   image:
+  //     "https://visitghana.com/wp-content/uploads/2018/03/Wechiau-Hippo-Sanctuary.jpg",
+  //   category: "Hotel",
+  // },
 
   // VOLTA
   {
@@ -794,7 +868,7 @@ const attractions: Attraction[] = [
     description:
       "A lagoon-side restaurant known for eco-friendly tourism and fresh meals.",
     image:
-      "https://visitghana.com/wp-content/uploads/2020/03/Meet-Me-There.jpg",
+      "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1d/0c/e4/7f/meet-me-there.jpg?w=700&h=-1&s=1",
     category: "Restaurant",
   },
   {
@@ -804,9 +878,65 @@ const attractions: Attraction[] = [
     location: "Ho",
     description:
       "Comfortable hotel with views of the Volta landscape and easy access to nearby attractions.",
-    image: "https://example.com/volta-river-view.jpg",
+    image:
+      "https://tortoisepath.com/wp-content/uploads/2024/06/Volta-Hotel-Akosombo-Akosombo-Ghana-TortoisePathcom-1024x575.webp",
     category: "Hotel",
   },
+  {
+    id: 80,
+    name: "Chances Hotel & Restaurant",
+    region: "Volta",
+    location: "Ho",
+    description:
+      "Modern hotel in Ho city center with restaurant and conference facilities.",
+    image:
+      "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/13/f6/7e/7d/chances-hotel.jpg?w=1200&h=1200&s=1",
+    category: "Hotel",
+  },
+  {
+    id: 81,
+    name: "Woezor Hotel",
+    region: "Volta",
+    location: "Ho",
+    description:
+      "Affordable hotel with good amenities in the heart of Ho town.",
+    image:
+      "https://www.hotelsgh.com/sites/default/files/public/styles/hotel_image/public/w11.jpg?itok=zUXZ-B5B",
+    category: "Hotel",
+  },
+  // {
+  //   id: 82,
+  //   name: "HP Hotel",
+  //   region: "Volta",
+  //   location: "Ho",
+  //   description:
+  //     "Budget-friendly hotel offering comfortable stays for travelers in Ho.",
+  //   image:
+  //     "https://lh3.googleusercontent.com/p/AF1QipOA7vQ8Z9X5Y6J7K8L9M0N1O2P3Q4R5S6T7U8V=s1360-w1360-h1020",
+  //   category: "Hotel",
+  // },
+  // {
+  //   id: 83,
+  //   name: "Taste of Africa Restaurant",
+  //   region: "Volta",
+  //   location: "Ho",
+  //   description:
+  //     "Popular restaurant in Ho serving authentic local Volta cuisine.",
+  //   image:
+  //     "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/15/b7/c8/d9/local-dishes.jpg?w=900&h=500&s=1",
+  //   category: "Restaurant",
+  // },
+  // {
+  //   id: 84,
+  //   name: "Beige Lounge & Restaurant",
+  //   region: "Volta",
+  //   location: "Ho",
+  //   description:
+  //     "Upscale lounge and restaurant offering continental and local dishes in Ho.",
+  //   image:
+  //     "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/14/c9/a7/b8/beige-lounge.jpg?w=900&h=500&s=1",
+  //   category: "Restaurant",
+  // },
 
   // WESTERN
   {
@@ -843,7 +973,8 @@ const attractions: Attraction[] = [
     region: "Western",
     location: "Takoradi",
     description: "Seafood and local cuisine.",
-    image: "https://images.contentstack.io/v3/assets/bltba617d00249585dc/blt655d223c4fe61e8f/685c43802114b428fce0df94/25HICV_OLR_WV_F&B_Restaurant_Breezes_7_4320x2700-HICV.jpg?format=pjpg&auto=webp&disable=upscale&quality=70&width=2048&height=1280&fit=crop",
+    image:
+      "https://images.contentstack.io/v3/assets/bltba617d00249585dc/blt655d223c4fe61e8f/685c43802114b428fce0df94/25HICV_OLR_WV_F&B_Restaurant_Breezes_7_4320x2700-HICV.jpg?format=pjpg&auto=webp&disable=upscale&quality=70&width=2048&height=1280&fit=crop",
     category: "Restaurant",
   },
   {
@@ -852,7 +983,8 @@ const attractions: Attraction[] = [
     region: "Western",
     location: "Takoradi",
     description: "Comfortable coastal hotel.",
-    image: "https://example.com/takoradi-hotel.jpg",
+    image:
+      "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/05/5f/53/4a/africa-beach-hotel.jpg?w=1200&h=-1&s=1",
     category: "Hotel",
   },
 ];
@@ -867,7 +999,6 @@ export default function DiasporaPage() {
     useState<Attraction | null>(null);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
-  // Reset image index when a new attraction is selected
   useEffect(() => {
     if (selectedAttraction) {
       setCurrentImageIndex(0);
