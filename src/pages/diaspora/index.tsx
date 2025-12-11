@@ -438,8 +438,7 @@ const attractions: Attraction[] = [
     location: "Osu",
     description:
       "Afrobeat-heavy energised nightlife, perfect for dancing to African rhythms.",
-    image:
-      "https://kentetv.com/wp-content/uploads/2023/05/ace-tantra.jpg",
+    image: "https://kentetv.com/wp-content/uploads/2023/05/ace-tantra.jpg",
     category: "Club",
   },
 
@@ -1393,20 +1392,106 @@ export default function DiasporaPage() {
         </div>
 
         {totalPages > 1 && (
-          <div className="flex justify-center mt-6 gap-2">
-            {Array.from({ length: totalPages }, (_, i) => (
-              <button
-                key={i + 1}
-                onClick={() => paginate(i + 1)}
-                className={`px-3 py-1 rounded ${
-                  currentPage === i + 1
-                    ? "bg-blue-600 text-white"
-                    : "bg-gray-200"
-                }`}
-              >
-                {i + 1}
-              </button>
-            ))}
+          <div className="flex justify-center items-center mt-6 gap-1 sm:gap-2 flex-wrap">
+            {/* Previous Button */}
+            <button
+              onClick={() => paginate(currentPage - 1)}
+              disabled={currentPage === 1}
+              className={`px-2 sm:px-3 py-1 rounded transition ${
+                currentPage === 1
+                  ? "bg-gray-200 text-gray-400 cursor-not-allowed"
+                  : "bg-gray-200 hover:bg-gray-300"
+              }`}
+            >
+              &lt;
+            </button>
+
+            {/* Page Numbers with Ellipsis */}
+            {(() => {
+              const pageNumbers = [];
+              const maxVisiblePages = 5; // Number of pages to show before ellipsis
+
+              if (totalPages <= maxVisiblePages + 2) {
+                // Show all pages if total is small
+                for (let i = 1; i <= totalPages; i++) {
+                  pageNumbers.push(
+                    <button
+                      key={i}
+                      onClick={() => paginate(i)}
+                      className={`px-2 sm:px-3 py-1 rounded transition ${
+                        currentPage === i
+                          ? "bg-blue-600 text-white"
+                          : "bg-gray-200 hover:bg-gray-300"
+                      }`}
+                    >
+                      {i}
+                    </button>
+                  );
+                }
+              } else {
+                // Show first few pages
+                for (
+                  let i = 1;
+                  i <= Math.min(maxVisiblePages, totalPages);
+                  i++
+                ) {
+                  pageNumbers.push(
+                    <button
+                      key={i}
+                      onClick={() => paginate(i)}
+                      className={`px-2 sm:px-3 py-1 rounded transition ${
+                        currentPage === i
+                          ? "bg-blue-600 text-white"
+                          : "bg-gray-200 hover:bg-gray-300"
+                      }`}
+                    >
+                      {i}
+                    </button>
+                  );
+                }
+
+                // Show ellipsis
+                if (totalPages > maxVisiblePages + 1) {
+                  pageNumbers.push(
+                    <span key="ellipsis" className="px-2 py-1 text-gray-600">
+                      . . .
+                    </span>
+                  );
+                }
+
+                // Show last page
+                if (totalPages > maxVisiblePages) {
+                  pageNumbers.push(
+                    <button
+                      key={totalPages}
+                      onClick={() => paginate(totalPages)}
+                      className={`px-2 sm:px-3 py-1 rounded transition ${
+                        currentPage === totalPages
+                          ? "bg-blue-600 text-white"
+                          : "bg-gray-200 hover:bg-gray-300"
+                      }`}
+                    >
+                      {totalPages}
+                    </button>
+                  );
+                }
+              }
+
+              return pageNumbers;
+            })()}
+
+            {/* Next Button */}
+            <button
+              onClick={() => paginate(currentPage + 1)}
+              disabled={currentPage === totalPages}
+              className={`px-2 sm:px-3 py-1 rounded transition ${
+                currentPage === totalPages
+                  ? "bg-gray-200 text-gray-400 cursor-not-allowed"
+                  : "bg-gray-200 hover:bg-gray-300"
+              }`}
+            >
+              &gt;
+            </button>
           </div>
         )}
       </div>
