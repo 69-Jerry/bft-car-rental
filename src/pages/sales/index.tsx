@@ -20,6 +20,7 @@ import {
 } from "../../components/ui/card";
 
 import { Hero } from "./hero";
+import Snowfall from "react-snowfall";
 
 interface Property {
   id: number;
@@ -78,6 +79,17 @@ export default function SalesSection() {
           />
         </div>
       )}
+
+      <Snowfall
+              snowflakeCount={200}
+              style={{
+                position: "fixed",
+                width: "100vw",
+                height: "100vh",
+                zIndex: 9999,
+                pointerEvents: "none",
+              }}
+            />
 
       <Hero />
 

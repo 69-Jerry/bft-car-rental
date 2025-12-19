@@ -11,6 +11,7 @@ import PropertyManagementImg from "../../assets/images/pexels-kindelmedia-757897
 import LandscapingImg from "../../assets/images/pexels-pixabay-158028.jpg";
 
 import { PricingStats } from "./components/stats";
+import Snowfall from "react-snowfall";
 
 const services = [
   {
@@ -85,6 +86,17 @@ export default function AllServices() {
       aria-label="BFT Car Rental & Estate Services in Ghana – Full Service List"
       className="min-h-screen bg-background flex flex-col"
     >
+
+      <Snowfall
+              snowflakeCount={200}
+              style={{
+                position: "fixed",
+                width: "100vw",
+                height: "100vh",
+                zIndex: 9999,
+                pointerEvents: "none",
+              }}
+            />
       <Hero />
 
       <div className="max-w-7xl mx-auto px-4">

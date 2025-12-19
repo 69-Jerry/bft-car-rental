@@ -1,3 +1,4 @@
+import Snowfall from "react-snowfall";
 import { Hero } from "./components/hero";
 import { CustomerReviews } from "./components/reviews";
 import { PricingStats } from "./components/stats";
@@ -7,6 +8,16 @@ import { WhyTrustUs } from "./components/wtsu";
 const LandingPage = () => {
   return (
     <div className="min-h-screen bg-background flex flex-col">
+      <Snowfall
+              snowflakeCount={200}
+              style={{
+                position: "fixed",
+                width: "100vw",
+                height: "100vh",
+                zIndex: 9999,
+                pointerEvents: "none",
+              }}
+            />
 
       {/* Hero Section (Hero component contains the actual H1) */}
       <Hero />

@@ -3,6 +3,7 @@ import type React from "react";
 import { useState } from "react";
 import { Mail, Phone, MapPin, Send } from "lucide-react";
 import { Hero } from "./components/hero";
+import Snowfall from "react-snowfall";
 
 interface FormData {
   name: string;
@@ -43,6 +44,16 @@ export function ContactUs() {
 
   return (
     <div className="min-h-screen bg-background flex flex-col">
+      <Snowfall
+              snowflakeCount={200}
+              style={{
+                position: "fixed",
+                width: "100vw",
+                height: "100vh",
+                zIndex: 9999,
+                pointerEvents: "none",
+              }}
+            />
        <Hero />
 
       <section className="bg-white py-16 px-4 md:px-8 lg:px-16">
