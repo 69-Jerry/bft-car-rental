@@ -57,7 +57,7 @@ function LandingLayout() {
       <Outlet />
       <Toaster />
       <Footer />
-      <Analytics />
+      {import.meta.env.PROD && <Analytics />}
     </div>
   );
 }
