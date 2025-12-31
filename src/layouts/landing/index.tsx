@@ -3,6 +3,7 @@ import { Outlet } from "react-router-dom";
 import  Navbar  from "../../components/navbar";
 import { Toaster } from "../../components/ui/toaster";
 import { Footer } from "../../components/footer";
+import { Analytics } from "@vercel/analytics/next"
 
 function LandingLayout() {
   return (
@@ -11,6 +12,7 @@ function LandingLayout() {
       <Outlet />
       <Toaster />
       <Footer/>
+      <Analytics />
     </div>
   );
 }
