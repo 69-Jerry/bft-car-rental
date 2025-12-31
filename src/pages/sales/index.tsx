@@ -20,7 +20,6 @@ import {
 } from "../../components/ui/card";
 
 import { Hero } from "./hero";
-import Snowfall from "react-snowfall";
 
 interface Property {
   id: number;
@@ -80,17 +79,6 @@ export default function SalesSection() {
         </div>
       )}
 
-      <Snowfall
-              snowflakeCount={200}
-              style={{
-                position: "fixed",
-                width: "100vw",
-                height: "100vh",
-                zIndex: 9999,
-                pointerEvents: "none",
-              }}
-            />
-
       <Hero />
 
       <section
@@ -98,7 +86,6 @@ export default function SalesSection() {
         aria-label="Properties for Sale in Ghana"
       >
         <div className="max-w-7xl mx-auto px-6">
-
           {/* SEO Heading */}
           <h1 className="text-3xl font-bold text-center mb-10 text-[#003d7a]">
             Properties for Sale in Ghana

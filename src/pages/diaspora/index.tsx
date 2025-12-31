@@ -29,7 +29,6 @@ import TafiMonkeySanctuary from "../../assets/images/monkysanc.jpeg";
 import KumasiMuseum from "../../assets/images/Manhyia Palace Museum (2025) - All You Need to Know BEFORE You Go (with Reviews).jpeg";
 
 import { Hero } from "./hero";
-import Snowfall from "react-snowfall";
 
 interface Attraction {
   id: number;
@@ -1199,16 +1198,6 @@ export default function DiasporaPage() {
 
   return (
     <div>
-      <Snowfall
-        snowflakeCount={200}
-        style={{
-          position: "fixed",
-          width: "100vw",
-          height: "100vh",
-          zIndex: 9999,
-          pointerEvents: "none",
-        }}
-      />
       <Hero />
 
       <div className="p-4 sm:p-8 md:p-16 lg:p-24 xl:p-[126px]">

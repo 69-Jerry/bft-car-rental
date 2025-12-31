@@ -11,7 +11,6 @@ import PropertyManagementImg from "../../assets/images/pexels-kindelmedia-757897
 import LandscapingImg from "../../assets/images/pexels-pixabay-158028.jpg";
 
 import { PricingStats } from "./components/stats";
-import Snowfall from "react-snowfall";
 
 const services = [
   {
@@ -86,17 +85,6 @@ export default function AllServices() {
       aria-label="BFT Car Rental & Estate Services in Ghana – Full Service List"
       className="min-h-screen bg-background flex flex-col"
     >
-
-      <Snowfall
-              snowflakeCount={200}
-              style={{
-                position: "fixed",
-                width: "100vw",
-                height: "100vh",
-                zIndex: 9999,
-                pointerEvents: "none",
-              }}
-            />
       <Hero />
 
       <div className="max-w-7xl mx-auto px-4">
@@ -104,12 +92,13 @@ export default function AllServices() {
         <div className="text-center mb-16 mt-32">
           {/* ⭐ SEO H1 */}
           <h1 className="text-4xl sm:text-5xl font-bold text-[#003d7a] mb-6 font-poppins">
-            All Our Services – Car Rental, Estate, Logistics & Construction in Ghana
+            All Our Services – Car Rental, Estate, Logistics & Construction in
+            Ghana
           </h1>
           <p className="text-gray-600 text-lg max-w-2xl mx-auto">
-            BFT Car Rental & Estate Services provides fully integrated solutions in
-            transportation, real estate, fleet operations, logistics, and property
-            maintenance across Ghana.
+            BFT Car Rental & Estate Services provides fully integrated solutions
+            in transportation, real estate, fleet operations, logistics, and
+            property maintenance across Ghana.
           </p>
         </div>
 
