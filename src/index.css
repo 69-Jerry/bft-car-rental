@@ -2,7 +2,6 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-@import 'react-toastify/dist/ReactToastify.css';
 
 @layer utilities {
   .animate-fade-in {
@@ -43,12 +42,11 @@ body {
   @apply bg-gray-300 rounded-full dark:bg-gray-600;
 }
 
-
 @layer base {
   :root {
-    --font-poppins: 'Poppins';
-    --font-roboto: 'Roboto';
-    --font-sans: 'DM Sans';
+    --font-poppins: "Poppins";
+    --font-roboto: "Roboto";
+    --font-sans: "DM Sans";
     --font-mono: monospace;
     --radius: 0.5rem;
     --sidebar-background: 0 0% 98%;
@@ -219,10 +217,10 @@ body {
 .success-gradient {
   background: linear-gradient(to right, #66bb6a, #81c784);
 }
-.font-poppins{
+.font-poppins {
   font-family: var(--font-poppins);
 }
-.font-sans{
+.font-sans {
   font-family: var(--font-sans);
 }
 
